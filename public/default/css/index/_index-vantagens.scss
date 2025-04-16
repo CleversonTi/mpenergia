@@ -1,0 +1,56 @@
+section.index-vantagens {
+  background-image: url("../image/bg-vantagens.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px 0;
+
+  .row-vantagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+
+    .box-vantagem {
+      flex: calc(25% - 5px * 4) 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .img-in {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .title-in {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    background-position: 80%;
+    .row-vantagens {
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      .box-vantagem {
+        flex: 100% 1 1;
+      }
+    }
+
+  }
+}

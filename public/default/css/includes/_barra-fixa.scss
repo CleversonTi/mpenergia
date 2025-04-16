@@ -1,0 +1,27 @@
+section.barra-fixa {
+    position: fixed;
+    bottom: -1px;
+    background: #fff;
+
+    border-top: 2px solid #599AA8;
+    width: 100%;
+    padding: 10px 80px 15px 80px;
+    z-index: 600;
+    @include transitionDelay(0.5s, all);
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+
+
+    &.oculta {
+        bottom: -100px;
+    }
+
+    .main-phone:not(.zap) {
+        .icon {
+            border-color: #10404B;
+            background-color: #10404B;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+section.sobre-nos {
+  padding: 111px 0 65px 0;
+}
+section.sobre-nos .texto-sobre-nos {
+  color: #000;
+  font-family: Kanit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+section.sobre-nos .texto-sobre-nos h1 {
+  font-size: 38px;
+}
+section.sobre-nos .texto-sobre-nos h2 {
+  font-size: 32px;
+}
+section.sobre-nos .texto-sobre-nos h3 {
+  font-size: 27px;
+}
+section.sobre-nos .texto-sobre-nos h4 {
+  font-size: 22px;
+}
+section.sobre-nos .texto-sobre-nos h5 {
+  font-size: 17px;
+}
+section.sobre-nos .texto-sobre-nos h6 {
+  font-size: 12px;
+}
+section.sobre-nos .texto-sobre-nos h1, section.sobre-nos .texto-sobre-nos h2, section.sobre-nos .texto-sobre-nos h3, section.sobre-nos .texto-sobre-nos h4, section.sobre-nos .texto-sobre-nos h5, section.sobre-nos .texto-sobre-nos h6 {
+  color: var(--4, #050319);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 38.4px */
+}
+section.sobre-nos .img-sobre-main {
+  position: relative;
+}
+section.sobre-nos .img-sobre-main .mais18 {
+  position: absolute;
+  top: -66px;
+  right: -35px;
+}
+section.sobre-nos .img-sobre-main .sobre-nos-img {
+  max-height: 386px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=sobre-nos.css.map */

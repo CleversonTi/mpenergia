@@ -1,0 +1,254 @@
+@import "includes/card-produto";
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+* {
+  background-size: cover;
+  background-position: center;
+}
+
+.main-phone {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+
+  .icon {
+    width: 41px;
+    height: 41px;
+    background-color: #599AA8;
+    border: 1px solid #007f92;
+    border-radius: 50px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info {
+    font-size: 16px;
+    font-style: normal;
+
+    .label {
+      font-weight: 600;
+      display: block;
+      color: #10404B;
+    }
+
+    .number {
+      font-weight: 400;
+      display: block;
+      color: #10404B;
+
+    }
+  }
+
+  &.zap {
+    .icon {
+      background-color: #70AA7D;
+      border: 1px solid #489c5e;
+    }
+  }
+
+  &.blue-icon {
+    .icon {
+      background-color: #307BC4;
+      border: 1px solid #307BC4;
+    }
+
+    .number {
+      text-decoration: underline;
+    }
+  }
+
+
+}
+
+.main-cta {
+  border-radius: 10px;
+  background-color: #D32020;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 235px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.5s all;
+  text-align: center;
+  gap: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #8f1313;
+    color: #fff;
+  }
+
+  &.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    background: linear-gradient(90deg, #01CE5F 20%, #00B55C 90%);
+    font-weight: 600;
+
+    &:hover {
+      background: #135f00;
+    }
+  }
+
+  &.carrinho {
+    background-color: transparent;
+    border: 1px solid #10404B;
+    color: #10404B;
+    font-weight: 400;
+    position: relative;
+
+    svg {
+      path {
+        transition: 0.3s all;
+      }
+    }
+
+    &:hover {
+      background-color: #10404B;
+      color: white;
+
+      svg {
+        path {
+          stroke: white;
+        }
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: 50px;
+      min-height: 44px;
+      .txt-in {
+        display: none;
+      }
+    }
+
+    .qtd-carrinho {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #10404b;
+      color: white;
+      font-size: 13px;
+      position: absolute;
+      right: 11px;
+      top: calc(50% - 12.5px);
+
+      @media (max-width: 991px){
+        top: -7px;
+        right: -7px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    font-size: 16px !important;
+    padding: 10px !important;
+    .txt-in {
+
+    }
+  }
+}
+
+.carousel-tool {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 40px 0 0 0;
+
+  .prev, .next {
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  ul.carousel-tool-dots {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    .custom-dots-destaque-in {
+      width: 8.181px;
+      height: 8.181px;
+      border-radius: 8.181px;
+      background-color: #d9d9d9;
+      transition: 0.3s all;
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: #171717;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.owl-carousel .owl-nav:not(.disabled) {
+  position: absolute;
+  bottom: 50px;
+  left: 16%;
+  display: flex;
+  gap: 30px;
+
+  .owl-prev, .owl-next {
+    transition: 0.3s all;
+    outline: none;
+    border: none;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.owl-carousel .owl-dots:not(.disabled) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+  .owl-dot {
+    border-radius: 100%;
+    background: #D9D9D9;
+    width: 13px;
+    height: 13px;
+
+    &.active {
+      background: #050E2C;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 20px;
+  }
+}

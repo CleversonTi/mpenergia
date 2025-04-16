@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* CLASSES GLOBAIS */
+
+.has-error {
+    border-color: red !important;
+}
+
+.hide-desktop {
+    @media (min-width: 991px) {
+        display: none !important;
+    }
+}
+
+.hide-mobile {
+    @media (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+.container {
+    max-width: 1300px;
+
+    &.small {
+        max-width: 1035px;
+    }
+
+    &.big {
+        max-width: 1600px;
+    }
+}
+
+ul.no-list-style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+/*  Validação   */
+.ng-invalid-required.ng-touched,
+.campo-invalido {
+    border-color: #dc3545 !important;
+}
+
+/* VARIAVEIS GLOBAIS DO PROJETO */
+
+$primary: #ffffff;
+$secondary: #6db895;
+$terciary: #00afc5;
+$fourth: #1c1c1c;
+$zap: #3cbc58;
+
+@import 'funcoes';
+@import 'globals';
+@import 'includes/header';
+@import 'includes/barra-lgpd';
+
+body {
+    font-size: 1em;
+    font-family: "Kanit", serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.4;
+    max-width: 1920px;
+    margin: auto;
+    overflow-x: hidden;
+
+    main {
+        overflow: hidden;
+    }
+
+    div#lightbox {
+        position: fixed !important;
+        top: 10px !important;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @import 'includes/modal';
+    @import 'formulario-enviado';
+    @import 'politica-termos';
+
+    main {
+        // Comuns
+        @import 'includes/header-conteudo';
+        @import 'includes/breadcrumb';
+        @import "includes/paginacao";
+
+        @import 'index';
+        @import 'sobre';
+        @import "produtos";
+        @import "fornecedores";
+        @import "depoimentos";
+        @import "duvidas";
+        @import "blog";
+        @import "blog-interna";
+        @import "orcamento";
+        @import 'contato';
+        @import "programa";
+        @import "carrinho";
+
+    }
+
+    footer {
+        @import 'includes/barra-fixa';
+        @import 'includes/barra-fixa-mobile';
+        @import 'includes/footer';
+        @import 'includes/botao-whatsapp';
+        @import 'includes/modal-whatsapp';
+        @import 'includes/menu-mobile';
+    }
+}

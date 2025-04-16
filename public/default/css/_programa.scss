@@ -1,0 +1,278 @@
+section.page-programa {
+  .page-programa-main {
+    padding: 70px 0;
+
+    .box-como-funciona {
+      margin-bottom: 90px;
+
+      h3 {
+        color: #161616;
+        text-align: center;
+        font-family: Kanit;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 45px;
+      }
+
+
+      .row-como-funciona {
+
+        .col-como-funciona {
+          position: relative;
+
+          &:nth-child(2) {
+            &::before, &::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              height: 100%;
+              width: 3px;
+              background-color: #C3C3C3;
+              pointer-events: none;
+            }
+
+            &::before {
+              left: -1.5px;
+            }
+
+            &::after {
+              right: -1.5px;
+            }
+          }
+
+          .box-como-funciona-in {
+            max-width: 350px;
+            margin: auto;
+
+            .icon {
+              margin-bottom: 17px;
+            }
+
+            .titulo-in {
+              color: #70AA7D;
+              font-family: Kanit;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              margin-bottom: 13px;
+            }
+
+            .valor-in {
+              color: #161616;
+              font-family: Kanit;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+          }
+        }
+
+
+      }
+
+    }
+
+    .box-green {
+      border-radius: 40px;
+      background: linear-gradient(155deg, #70AA7D 15.92%, #58AC6B 100%);
+      box-shadow: 0px 4px 22.3px 0px rgba(0, 0, 0, 0.25);
+      padding: 125px 50px;
+      height: 100%;
+
+      .box-green-conteudo {
+        color: #FFF;
+        font-family: Kanit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        h2 {
+          color: #FFF;
+          font-family: Kanit;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        h3 {
+          color: #FFF;
+          font-family: Kanit;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          &::after {
+            content: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="267" height="24" viewBox="0 0 267 24" fill="none"> <path d="M266.561 13.0607C267.146 12.4749 267.146 11.5251 266.561 10.9393L257.015 1.3934C256.429 0.807612 255.479 0.807612 254.893 1.3934C254.308 1.97918 254.308 2.92893 254.893 3.51472L263.379 12L254.893 20.4853C254.308 21.0711 254.308 22.0208 254.893 22.6066C255.479 23.1924 256.429 23.1924 257.015 22.6066L266.561 13.0607ZM0 13.5H265.5V10.5H0V13.5Z" fill="white"/> </svg>');
+            transform: translateY(10px);
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    form {
+      border-radius: 40px;
+      background: #FFF;
+      box-shadow: 0px 4px 22.3px 0px rgba(0, 0, 0, 0.25);
+      padding: 40px 40px;
+      height: 100%;
+
+      .box-input {
+        margin-bottom: 19px;
+
+        label {
+          color: #161616;
+          text-align: center;
+          font-family: Kanit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 7px;
+        }
+
+        input:not(.form-check-input),
+        textarea, select {
+          display: flex;
+          width: 100%;
+          padding: 15px 23px;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          border-radius: 10px;
+          border: 1px solid #BCBCBC;
+          background: #F1F1F1;
+          color: #909090;
+          font-family: Kanit;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          option {
+            color: var(--3, #595959);
+
+          }
+
+          &::placeholder {
+            color: #9f9f9f;
+          }
+
+        }
+
+        textarea {
+          height: 169px;
+          resize: none;
+        }
+      }
+
+      .main-cta {
+        border-radius: 10px;
+        background: #10404B;
+        margin: 16px auto 0 auto;
+        display: flex;
+        max-width: 232px;
+      }
+    }
+
+
+  }
+
+  .cadastre {
+    background-color: #10404B;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 23px;
+
+    .txt-cadastre {
+      color: #FFF;
+      text-align: center;
+      font-family: Kanit;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    @media (max-width: 991px) {
+      padding: 30px 0;
+      .txt-cadastre {
+        font-size: 25px;
+      }
+
+    }
+  }
+
+  @media (max-width: 991px) {
+    .page-programa-main {
+      .box-como-funciona {
+        margin-bottom: 30px;
+
+        h3 {
+          font-size: 25px;
+          text-align: center;
+        }
+
+        .row-como-funciona {
+          .col-como-funciona {
+            margin-bottom: 20px;
+            text-align: center;
+
+            &::before, &::after {
+              display: none;
+            }
+
+            .box-como-funciona-in {
+              .icon {
+                svg {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+
+              .titulo-in {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .box-green {
+        padding: 30px;
+        margin-bottom: 30px;
+        height: auto;
+
+        .box-green-conteudo {
+          h2 {
+            font-size: 27px;
+          }
+
+          h3 {
+            font-size: 22px;
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+      }
+
+      form {
+        padding: 40px 30px;
+      }
+    }
+  }
+}

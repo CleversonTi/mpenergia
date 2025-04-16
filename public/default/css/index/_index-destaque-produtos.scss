@@ -1,0 +1,92 @@
+section.index-destaque-produtos {
+  padding: 50px 0;
+
+  &.bg-destaque-hospitalar {
+    background-image: url("../image/bg-detaque-home-hospitalar.png");
+    background-size: 550px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+
+  .row-head-title-destaque {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    h2.title-categoria-destaque {
+      color: #243352;
+      font-family: Kanit;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      @media(max-width: 991px) {
+        font-size: 22px;
+      }
+    }
+
+    a {
+      display: block;
+      color: #243352;
+      text-align: center;
+      font-family: Kanit;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+      white-space: nowrap;
+    }
+
+  }
+
+  .owl-produtos-destaque {
+    .owl-dots {
+      display: none;
+    }
+  }
+
+  &.bg-destaque-estetica,&.bg-produto-relacionados {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .row-head-title-destaque {
+      h2.title-categoria-destaque {
+        color: white;
+      }
+
+      a {
+        color: white;
+      }
+
+    }
+
+    ul.carousel-tool-dots {
+      .custom-dots-destaque-in {
+        background-color: rgba(255, 255, 255, 0.16);
+
+        &.active, &:hover {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+  &.bg-destaque-estetica{
+    background-image: url("../image/bg-destaque-estetica.jpg");
+  }
+
+  &.bg-produto-relacionados{
+    background-image: url("../image/bg-produto-interna.jpg");
+  }
+
+  @media(max-width: 991px) {
+    background-position: 80%;
+  }
+
+}

@@ -1,0 +1,33 @@
+section.botao_whatsapp {
+    background-color: #25d366;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    z-index: 900;
+    bottom: 40px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    right: 30px;
+    border-radius: 75px;
+    @include transitionDelay(.5s, all);
+    i.fab.fa-whatsapp {
+      color: white;
+      font-size: 46px;
+      vertical-align: middle;
+    }
+    &.scroll{
+      @media(min-width: 992px){
+        bottom: 100px;
+      }
+    }
+    &:hover{
+      background-color: #1f9249;
+    }
+    @media screen and (max-width: 991px){
+        bottom: 75px;
+        right: 10px;
+    }
+  }

@@ -1,0 +1,179 @@
+section.index-fornecedores {
+  padding: 60px 0;
+  background-image: url("../image/bg-fornecedores.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .icon {
+    text-align: center;
+  }
+
+  h2 {
+    color: var(--4, #050319);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Kanit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 38.4px */
+    margin-bottom: 26px;
+  }
+
+  .thumb-fornecedores {
+    border-radius: 15px;
+    border: 1px solid #ABABAB;
+    background: #FFF;
+    padding: 29px 42px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+
+  .box-depoimentos {
+    padding: 60px 0 60px;
+
+    .box-list-depoimentos-left {
+      position: relative;
+
+      .depoimentos-fornecedores-bar {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        height: 100%;
+        width: 2px;
+        background-color: #599AA8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .circle-in {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background-color: #599AA8;
+          transition: 0.3s all;
+
+          &.active {
+            width: 14px;
+            height: 14px;
+          }
+        }
+
+      }
+
+
+      .box-depoimento {
+        border-radius: 15px;
+        padding: 33px 43px;
+        transition: 0.3s all;
+        max-width: 365px;
+        cursor: pointer;
+
+        &.active {
+          background-color: #FFF;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .nome-in {
+          color: #274760;
+          font-family: Kanit;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%; /* 26px */
+          @include limitarTexto(1);
+        }
+
+        .empresa-in {
+          color: #274760;
+          font-family: "PT Sans Caption";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          @include limitarTexto(1);
+        }
+      }
+    }
+
+
+    .box-list-depoimentos-right {
+      .box-depoimento {
+        display: flex;
+        gap: 17px;
+        opacity: 0;
+        height: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s all;
+
+        &.active {
+          opacity: 1;
+          max-height: 200px;
+        }
+
+        .icon {
+          width: 30px;
+        }
+
+        .depoimento-in {
+          width: calc(100% - 47px);
+          color: #555;
+          leading-trim: both;
+          text-edge: cap;
+          font-family: Kanit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          .stars {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    a.main-cta {
+      background-color: #274760;
+    }
+
+  }
+
+  @media (max-width: 991px) {
+    padding: 30px 0;
+    h2 {
+      font-size: 27px;
+    }
+
+    .box-depoimentos {
+      padding: 0;
+      margin-top: 30px;
+
+      .box-list-depoimentos-left {
+        margin-top: 15px;
+
+        .box-depoimento {
+          max-width: 280px;
+        }
+      }
+
+      .box-list-depoimentos-right {
+        .box-depoimento {
+          &.active {
+            max-height: 400px;
+          }
+        }
+      }
+    }
+  }
+
+}

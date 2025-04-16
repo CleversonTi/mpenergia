@@ -1,0 +1,27 @@
+section.preloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: white; // cor de fundo
+
+    .loader{
+        border: 6px solid #e5e5e5; // cor preloader
+        border-top-color: $primary; // cor destaque
+        animation: loader-rotate 1s infinite;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+
+    @keyframes loader-rotate {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+}

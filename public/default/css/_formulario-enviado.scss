@@ -1,0 +1,86 @@
+section.formulario-enviado {
+  padding: 100px 0;
+  // background-image: url('../image/bg-branco2.jpg');
+  color: #1C1C1C;
+
+  .box-in {
+    text-align: center;
+
+    h5 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #1C1C1C;
+      font-weight: 500;
+      border-bottom: 1px dotted #1C1C1C;
+    }
+
+    .btn-voltar {
+      color: #1C1C1C;
+      padding: 10px 30px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: 600;
+      background-color: transparent;
+      outline: none;
+      border: 2px solid #1C1C1C;
+      transition: 0.3s all;
+
+      &:hover {
+        background-color: #1C1C1C;
+        color: white;
+      }
+
+      i {
+        vertical-align: middle;
+        font-size: 20px;
+        margin-right: 15px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #1C1C1C;
+    }
+
+    h1 {
+      font-size: 75px;
+      font-weight: 500;
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 90px 0;
+    text-align: center;
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    .box-in {
+      text-align: center;
+
+      .btn-voltar {
+        font-size: 13px;
+        margin: 10px 0;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      h5 {
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+}

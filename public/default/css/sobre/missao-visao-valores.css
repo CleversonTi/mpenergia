@@ -1,0 +1,41 @@
+section.missao-visao-valores {
+  padding: 30px 0;
+}
+section.missao-visao-valores .box-missao-visao-valores {
+  background-color: #10404B;
+  height: 100%;
+  padding: 70px 32px 32px 32px;
+  position: relative;
+  max-width: 363px;
+  margin: 0 auto 20px auto;
+}
+section.missao-visao-valores .box-missao-visao-valores .icon {
+  position: absolute;
+  top: -30px;
+  left: 32px;
+  width: 77px;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #70aa7d;
+}
+section.missao-visao-valores .box-missao-visao-valores .title-in {
+  color: #F2F2F2;
+  font-family: Inter;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+section.missao-visao-valores .box-missao-visao-valores .value-in {
+  color: #F2F2F2;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=missao-visao-valores.css.map */

@@ -1,0 +1,139 @@
+.card-produto-padrao {
+  position: relative;
+  width: 309px;
+  height: 393px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s all;
+  border-radius: 30px;
+  margin: auto;
+  background-color: #243352;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/bg-card-produto.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    transition: 0.3s all;
+
+  }
+
+  @media (min-width: 992px){
+    &:hover {
+      &::before {
+        opacity: 0.9;
+      }
+
+
+    }
+  }
+
+
+  .img-produto,.title-in,.saiba-mais-in,.bottom-item{
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+
+  .img-produto {
+    width: 100%;
+    height: 200px;
+    border-radius: 14px;
+    background: #FFF;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+
+    .add-card-in {
+      background-color: #10404b;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      transition: 0.3s all;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-1px);
+        background-color: #0b5362;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .title-in {
+    color: #243352;
+    text-align: center;
+    font-family: Kanit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    @include limitarTexto(2);
+  }
+
+  .saiba-mais-in {
+    color: #243352;
+    text-align: center;
+    font-family: Kanit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+
+  .bottom-item {
+    display: flex;
+    justify-content: space-between;
+
+    .main-cta {
+      max-width: 198px;
+    }
+
+    .action-zap {
+      background-color: #2fb54d;
+      border-radius: 20px;
+      width: 63.59px;
+      height: 44.02px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(8px, 3px);
+      transition: 0.3s all;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #1f8035;
+      }
+    }
+  }
+
+
+
+}

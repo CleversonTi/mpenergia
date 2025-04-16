@@ -1,0 +1,89 @@
+section.page-depoimentos {
+  .page-depoimentos-main {
+    padding: 50px 0;
+
+    .page-texto {
+      color: #000;
+      text-align: center;
+      font-family: Kanit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 20.8px */
+      max-width: 895px;
+      margin: 0 auto 48px auto;
+
+      h1, h2 {
+        color: #10404B;
+        font-family: Kanit;
+        font-size: 33.835px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 43.985px */
+        margin-bottom: 27px;
+      }
+
+    }
+
+    .box-depoimento {
+      border-radius: 10px;
+      border: 1px solid #8E8E8E;
+      padding: 40px;
+      height: 320px;
+
+      .icon {
+        margin-bottom: 10px;
+      }
+
+      .depoimento-in {
+        color: #000;
+        font-family: Kanit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 20.8px */
+        margin-bottom: 15px;
+        @include limitarTexto(7)
+      }
+
+      .autor-in {
+        color: #274760;
+        font-family: Kanit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 26px */
+        @include limitarTexto(1)
+      }
+
+      .empresa-in {
+        color: #274760;
+        font-family: Kanit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 26px */
+        @include limitarTexto(1)
+      }
+    }
+
+    .carousel-tool {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .page-depoimentos-main {
+      .page-texto {
+        margin-bottom: 15px;
+
+        h1, h2 {
+          font-size: 25px;
+        }
+      }
+    }
+    .box-depoimento {
+
+    }
+  }
+}

@@ -1,0 +1,15 @@
+section.page-sobre {
+
+  section.bg-sobre-nos {
+    background-image: url("../image/bg-sobre-nos.png");
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: 100% 100px;
+  }
+
+  @import "sobre/sobre-nos";
+  @import "sobre/missao-visao-valores";
+  @import "sobre/sobre-galeria-fotos";
+
+
+}

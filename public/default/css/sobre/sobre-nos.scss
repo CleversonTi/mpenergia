@@ -1,0 +1,103 @@
+section.sobre-nos {
+  padding: 111px 0 65px 0;
+
+  .texto-sobre-nos {
+    color: #000;
+    font-family: Kanit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    h1 {
+      font-size: 38px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 27px;
+    }
+
+    h4 {
+      font-size: 22px;
+    }
+
+    h5 {
+      font-size: 17px;
+    }
+
+    h6 {
+      font-size: 12px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--4, #050319);
+      leading-trim: both;
+      text-edge: cap;
+      font-family: Kanit;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 38.4px */
+    }
+  }
+
+  .img-sobre-main {
+    position: relative;
+
+    .mais18 {
+      position: absolute;
+      top: -66px;
+      right: -35px;
+    }
+
+    .sobre-nos-img {
+      max-height: 386px;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 50px 0;
+
+    .img-sobre-main {
+      margin-bottom: 20px;
+
+      .mais18 {
+        height: 150px;
+        right: 0;
+        top: -50px;
+      }
+    }
+    .texto-sobre-nos{
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      h4 {
+        font-size: 17px;
+      }
+
+      h5 {
+        font-size: 12px;
+      }
+
+      h6 {
+        font-size: 12px;
+      }
+    }
+  }
+
+}

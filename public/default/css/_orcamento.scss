@@ -1,0 +1,49 @@
+section.page-orcamento {
+
+
+  .page-orcamento-main {
+    padding: 50px 0;
+
+    .box-ctas-contatos {
+      padding: 50px 30px;
+      border-radius: 15px;
+      background: #FFF;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 50px;
+
+      .main-phone, .main-phone.zap {
+        .icon {
+          background-color: #307BC4;
+          border: 1px solid #307BC4;
+        }
+      }
+
+      .main-cta {
+        background: linear-gradient(90deg, #2F74B7 0%, #284E6D 80%);;
+      }
+
+    }
+
+
+  }
+
+  @media (max-width: 991px) {
+    .page-orcamento-main {
+      padding: 30px 0;
+
+      .box-ctas-contatos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .main-phone {
+          min-width: 170px;
+        }
+      }
+    }
+  }
+}

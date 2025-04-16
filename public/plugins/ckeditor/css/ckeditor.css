@@ -1,0 +1,99 @@
+/* INICIO - EFEITO FADE IN FADE OUT */
+.elementToFadeIn {
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* FIM - EFEITO FADE IN FADE OUT */
+.divCkeditor .cke_chrome {
+  border: none !important; }
+.divCkeditor .cke_top {
+  border: 1px solid #d1d1d1 !important;
+  background: white !important;
+  padding: 6px 8px 2px !important;
+  white-space: normal !important;
+  border-radius: 10px !important; }
+.divCkeditor .cke_bottom {
+  padding: 6px 8px 2px !important;
+  position: relative !important;
+  border: 1px solid #d1d1d1 !important;
+  background: white !important;
+  border-radius: 10px !important;
+  display: none; }
+.divCkeditor .cke_contents.cke_reset {
+  min-height: 500px !important; }
+.divCkeditor span#cke_41 {
+  display: none !important; }
+.divCkeditor a#cke_40 {
+  display: none !important; }
+.divCkeditor a#cke_34 {
+  display: none !important; }
+.divCkeditor a#cke_73 {
+  display: none !important; }
+.divCkeditor span#cke_1_top {
+  zoom: 1.1 !important;
+  border: none !important;
+  border-bottom: 1px solid #d1d1d1 !important;
+  border-radius: 0 !important; }
+.divCkeditor .uploadImg {
+  zoom: 0.7 !important; }
+.divCkeditor .textoUpload {
+  text-align: center;
+  padding-top: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #515151;
+  font-style: italic; }
+.divCkeditor .box-ckeditor {
+  position: relative; }
+  .divCkeditor .box-ckeditor button.buttonImagem {
+    border: none;
+    margin: 0;
+    color: #484848;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    position: absolute;
+    top: 12px;
+    left: 444px; }
+    @media screen and (max-width: 768px) {
+      .divCkeditor .box-ckeditor button.buttonImagem {
+        left: inherit;
+        right: 0px; } }
+.divCkeditor .uploadImg .upload-image {
+  border-radius: 10px; }
+.divCkeditor .uploadImg .upload-image > span {
+  font-size: 20px !important; }
+.divCkeditor .uploadImg .upload-image-remove {
+  font-size: 20px !important; }
+
+/*# sourceMappingURL=ckeditor.css.map */

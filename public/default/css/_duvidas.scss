@@ -1,0 +1,175 @@
+section.page-duvidas {
+  .page-duvidas-main {
+    padding: 50px 0;
+
+    h2.title-main {
+      color: #011F43;
+      font-family: Kanit;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      margin-bottom: 50px;
+    }
+
+    .box-duvidas {
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 50px;
+
+      .box-duvidas-item {
+
+        .box-pergunta {
+          color: #10404B;
+          font-family: Kanit;
+          font-size: 23px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          border-bottom: 1px solid #A1A1A1;
+          padding: 27px 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          span {
+            max-width: calc(100% - 30px);
+          }
+
+          &::after {
+            content: '';
+            background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>');
+            width: 20px;
+            height: 20px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: 0.3s all;
+            float: right;
+            font-size: 16px;
+            font-weight: 700;
+          }
+
+          &[aria-expanded="true"] {
+            border-color: transparent;
+
+            &::after {
+              background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>');
+            }
+          }
+        }
+
+        .box-resposta {
+          color: #2B2B2B;
+          font-family: Kanit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        &:last-child {
+          .box-pergunta {
+            border-color: transparent;
+          }
+        }
+      }
+
+
+    }
+
+
+    .box-form-duvidas {
+      border-radius: 3px;
+      background: #10404B;
+      padding: 28px 25px 50px 25px;
+
+      .text-form {
+        h3 {
+          color: #FFF;
+          text-align: center;
+          font-family: Kanit;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        p {
+          color: #FFF;
+          text-align: center;
+          font-family: Kanit;
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+
+      .box-input {
+        margin-bottom: 19px;
+
+        label {
+          color: #FFF;
+          font-family: Kanit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        input:not(.form-check-input),
+        textarea, select {
+          display: flex;
+          width: 100%;
+          padding: 15px 15px;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          border-radius: 7px;
+          border: 1px solid #BBB;
+          background: #FFF;
+          color: var(--3, #595959);
+          font-family: "Plus Jakarta Sans";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          option {
+            color: var(--3, #595959);
+
+          }
+
+          &::placeholder {
+            color: #9f9f9f;
+          }
+
+        }
+
+      }
+
+      button.main-cta {
+        margin-top: 0;
+        border-radius: 10px;
+        background: #70AA7D;
+      }
+
+    }
+  }
+
+  @media (max-width: 991px){
+    .page-duvidas-main{
+      h2.title-main{
+        font-size: 27px;
+      }
+      .box-duvidas{
+        padding: 15px 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+}

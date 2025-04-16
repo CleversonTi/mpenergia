@@ -1,0 +1,116 @@
+section.page-blog {
+  .page-blog-in {
+    padding: 80px 0;
+    background-image: url("../image/bg-blog.png");
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    .blog-card {
+      display: flex;
+      gap: 60px;
+      border-radius: 15px;
+      background: #F1F1F1;
+      overflow: hidden;
+      margin-bottom: 25px;
+
+      .blog-card-img {
+        width: 333px;
+        height: 243px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+      }
+
+      .blog-card-text {
+        width: calc(100% - 333px - 60px);
+        padding: 30px 30px 30px 0;
+
+        h3 {
+          color: #243352;
+          font-size: 24.037px;
+          font-family: Kanit;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%; /* 28.844px */
+          @include limitarTexto(2);
+          margin-bottom: 22px;
+          transition: 0.3s all;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+        }
+
+        .resumo {
+          color: var(--3, #595959);
+          leading-trim: both;
+          text-edge: cap;
+          font-family: "Plus Jakarta Sans";
+          font-size: 13.521px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 18.929px */
+          @include limitarTexto(3);
+          margin-bottom: 15px;
+          transition: 0.3s all;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+
+        }
+
+        .continue {
+          color: #599AA8;
+          font-family: Kanit;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: none;
+          text-decoration-thickness: auto;
+          text-underline-offset: auto;
+          text-underline-position: from-font;
+          transition: 0.3s all;
+
+          &:hover {
+            text-decoration: underline;
+            color: #243352;
+
+          }
+        }
+      }
+
+    }
+  }
+
+  @media (max-width: 991px) {
+    .page-blog-in {
+      padding: 30px 0;
+
+      .blog-card {
+        flex-direction: column;
+        gap: unset;
+
+        .blog-card-img {
+          width: 100%;
+          height: 200px;
+        }
+
+        .blog-card-text {
+          width: 100%;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}

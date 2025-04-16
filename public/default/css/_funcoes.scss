@@ -1,0 +1,139 @@
+@mixin placeholder($fontsize, $fontweight, $cor) {
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-size: $fontsize;
+        font-weight: $fontweight;
+        color: $cor;
+        opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-size: $fontsize;
+        font-weight: $fontweight;
+        color: $cor;
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        font-size: $fontsize;
+        font-weight: $fontweight;
+        color: $cor;
+    }
+}
+
+@mixin corrigirCarousel($altura, $largura) {
+    @media (min-width: 992px) {
+        .owl-stage-outer {
+            height: calc(100% + #{$altura});
+            margin: ($altura / 2 * -1) ($largura / 2 * -1);
+            padding: ($altura / 2) ($largura / 2);
+            width: calc(100% + #{$largura});
+        }
+    }
+}
+
+@mixin fitContent($both: false) {
+    @if ($both) {
+        width: -moz-fit-content;
+        width: fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    } @else {
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+}
+
+@mixin transitionDelay($tempo, $tipo: all) {
+    -webkit-transition: $tipo $tempo;
+    -moz-transition: $tipo $tempo;
+    -ms-transition: $tipo $tempo;
+    -o-transition: $tipo $tempo;
+    transition: $tipo $tempo;
+}
+
+@mixin limitarTexto($linha, $altura: '') {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $linha;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    @if ($altura) {
+        height: $altura;
+    }
+}
+
+@mixin hoverPreencherTop(
+    $boxshadow: 2px 2px 2px 1px #cacaca,
+    $deslocamento: -2px,
+    $background: #004749,
+    $position: relative,
+    $tempo: 0.3s,
+    $color: white
+) {
+    position: $position;
+    overflow: hidden;
+    z-index: 2;
+    -webkit-transition: all $tempo;
+    -moz-transition: all $tempo;
+    -ms-transition: all $tempo;
+    -o-transition: all $tempo;
+    transition: all $tempo;
+    &::before {
+        z-index: -1;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        color: $color !important;
+        top: 100%;
+        background-color: $background;
+        -webkit-transition: all $tempo;
+        -moz-transition: all $tempo;
+        -ms-transition: all $tempo;
+        -o-transition: all $tempo;
+        transition: all $tempo;
+    }
+    &:hover {
+        color: $color !important;
+        box-shadow: $boxshadow;
+        border-color: $background;
+        -webkit-transform: translateY($deslocamento);
+        -moz-transform: translateY($deslocamento);
+        -ms-transform: translateY($deslocamento);
+        -o-transform: translateY($deslocamento);
+        transform: translateY($deslocamento);
+
+        &::before {
+            top: 0px;
+        }
+    }
+}
+
+@mixin incluirMobile($propriedade, $valor) {
+    @media screen and (max-width: 991px) {
+        #{$propriedade}: $valor;
+    }
+}
+
+@mixin incluirDesktop($propriedade, $valor) {
+    @media screen and (min-width: 992px) {
+        #{$propriedade}: $valor;
+    }
+}
+
+@mixin equalCarousel() {
+    @media (min-width: 992px) {
+        .owl-carousel {
+            .owl-stage {
+                display: flex;
+            }
+            .owl-item {
+                display: flex;
+                flex: 1 0 auto;
+            }
+        }
+    }
+}

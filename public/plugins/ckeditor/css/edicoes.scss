@@ -1,0 +1,46 @@
+
+.btn{
+  &.btn-info, &.btn-danger{
+    &.bold{
+      border-radius: 25px;
+    }
+  }
+}
+
+.alerta_salvar{
+  color: #e22424;
+  text-align: center;
+  margin-top: 9px;
+  font-size: 10px;
+}
+button.btn.btn-secondary {
+  background-color: #50b848;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  text-transform: uppercase;
+  &.blue{
+    background: #5c96d2;
+  }
+  &.navy-blue{
+    background: #8fadcc;
+  }
+}
+.btnPrimeiro{
+  border-radius: 25px 0px 0px 25px;
+}
+.btnUltimo{
+  border-radius: 0px 25px 25px 0px;
+}
+.fa.fa-sign-out, .fa.fa-floppy-o, .fa.fa-file-o{
+  font-size: 20px;
+}
+.divbuttons {
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  margin-right: 10px;
+}
