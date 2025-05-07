@@ -35,7 +35,7 @@ Route::namespace('Site')->group(function () {
 
 
     /*  PAGE TESTE  */
-    Route::get(PluginController::obterUrl(SiteController::PAGE_TEST).'/{uri?}', [PaginaTesteController::class, 'index'])->name('teste');
+    Route::get(PluginController::obterUrl(SiteController::PAGE_TEST).'/{categoria?}', [PaginaTesteController::class, 'index'])->name('teste');
 
 
 

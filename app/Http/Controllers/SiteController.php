@@ -23,6 +23,7 @@ class SiteController extends BaseSiteController
 
 
     public const PAGE_TEST = 515;
+    public const PAGE_TEST_CATEGORIAS = 524;
 
 
     public const PAGE_HOME = 60;

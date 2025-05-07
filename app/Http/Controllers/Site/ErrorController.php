@@ -15,6 +15,8 @@ class ErrorController extends SiteController
         // SEO
         // $this->gerarSeo();
 
+        echo '<h1>pagina não encontrada</h1>';
+        exit;
         return redirect()->route('home');
         // return view('errors.404', []);
     }
