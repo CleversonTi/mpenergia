@@ -47,6 +47,13 @@ $version = '?raddarAtt=' . md5('08/01/25 21:57');
         <link href="{{URL::to('plugins/owlcarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}" rel="stylesheet">
         <link href="{{URL::to('plugins/lightbox2/dist/css/lightbox.min.css')}}" rel="stylesheet">
         <link href="{{URL::to('default/css/custom.css') . $version}}" rel="stylesheet">
+        
+        <!--Preload Fonts-->
+        <link rel="preload" href="{{ asset('default/fonts/DMSans18pt-Light.woff2') }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ asset('default/fonts/DMSans18pt-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ asset('default/fonts/DMSans18pt-Medium.woff2') }}"  as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ asset('default/fonts/DMSans18pt-Bold.woff2') }}"    as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ asset('default/fonts/DMSans18pt-ExtraBold.woff2') }}" as="font" type="font/woff2" crossorigin>
 
         <!--    Js     -->
         <script src="{{URL::to('plugins/jquery-3.5.1/jquery-3.5.1.min.js')}}"></script>

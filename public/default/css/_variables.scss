@@ -1,0 +1,11 @@
+@import 'fonts';
+// Fonte primária
+$font-primary: 'DM Sans', sans-serif;
+
+// Exemplo para outra fonte caso precise
+$font-secondary: 'Arial', sans-serif;
+
+body{
+    font-family: $font-primary;
+    font-weight: 400; // Regular
+}
