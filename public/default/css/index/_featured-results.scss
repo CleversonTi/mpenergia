@@ -1,0 +1,77 @@
+// public/default/css/includes/_featured-results.scss
+
+// ——— vars (ajuste se quiser)
+$featured-bg:     #fff !default;
+$featured-border: #2e5fa6 !default;
+$featured-number: #1f3766 !default;
+$featured-shadow: 0 8px 25.3px 0 rgba(0, 0, 0, 0.10) !default;
+$featured-shadow-hover: 0 10px 24px rgba(0,0,0,.08) !default;
+$radius:          20px !default;
+
+// ——— seção
+.featured-results {
+    background: $featured-bg;
+    padding-block: 3rem;
+    .ietm-card {               // (mantive "ietm" como você escreveu)
+        flex-shrink: 0;
+        max-width: 297px;
+  }
+  @media (max-width: 767.98px) {
+    padding-block: 2rem;
+  }
+
+  .result-card {
+
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   // centraliza verticalmente
+    gap: .5rem;
+    background: #fff;
+    
+    border-radius: $radius;
+    box-shadow: $featured-shadow;
+    padding: 1rem;
+
+    @media (min-width: 768px) { padding: 1.5rem; }
+
+    .result-icon {
+      margin-bottom: .5rem;
+
+      img { display: block; width: 32px; height: 32px; }
+      i   { font-size: 2rem; line-height: 1; }
+    }
+
+    .result-number {
+        
+        span{
+            color: #023766;
+            font-family: "DM Sans";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+        }
+    }
+
+    .result-desc {
+      color: #6c757d; // gray-600 do Bootstrap
+      font-size: .875rem;
+      span{
+        color: #323232;
+        font-family: "DM Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    transition: transform .2s ease, box-shadow .2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $featured-shadow-hover;
+    }
+  }
+}

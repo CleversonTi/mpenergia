@@ -21,6 +21,14 @@ class IndexController extends SiteController
         $plugin->setId(SiteController::PAGE_HOME);
         $home = $plugin->obterCampos();
 
+        // Energia
+        $plugin->setId(SiteController::PAGE_ENERGIA);
+        $energyHome = $plugin->obterCampos();
+       
+        $energyInterna = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
+
+       
+
         // Produtos
         $plugin->setId(SiteController::PAGE_PRODUTOS);
         $destaques = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
@@ -80,6 +88,8 @@ class IndexController extends SiteController
 
         return view('default.index', [
             'home' => $home,
+            'energy' =>  $energyInterna,
+            'energyHome' =>  $energyHome,
             'produtos_destaques' => $produtos_destaques,
             'fornecedores' => $fornecedores,
             'blog' => $blog,

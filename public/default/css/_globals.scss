@@ -1,4 +1,5 @@
 @import "includes/card-produto";
+@import 'funcoes';
 
 img {
   object-fit: cover;
@@ -9,17 +10,27 @@ img {
   background-size: cover;
   background-position: center;
 }
-
+.icon {
+    width: 49px;
+    height:49px;
+    background-color: none;
+    border: 1px solid #023766;
+    border-radius: 50px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
 .main-phone {
   display: flex;
   gap: 5px;
   cursor: pointer;
 
   .icon {
-    width: 41px;
-    height: 41px;
-    background-color: #599AA8;
-    border: 1px solid #007f92;
+    width: 49px;
+    height:49px;
+    background-color: none;
+    border: 1px solid #023766;
     border-radius: 50px;
     display: flex;
     align-content: center;
@@ -30,25 +41,28 @@ img {
   .info {
     font-size: 16px;
     font-style: normal;
-
+    .label, .number {
+        color: #023766;
+        font-family: "DM Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
     .label {
-      font-weight: 600;
-      display: block;
-      color: #10404B;
+      font-weight: 700;
     }
 
     .number {
-      font-weight: 400;
-      display: block;
-      color: #10404B;
+     
 
     }
   }
 
   &.zap {
     .icon {
-      background-color: #70AA7D;
-      border: 1px solid #489c5e;
+      background-color: transparent;
+      border: 1px solid #023766;
     }
   }
 
@@ -68,7 +82,7 @@ img {
 
 .main-cta {
   border-radius: 10px;
-  background-color: #D32020;
+  background: linear-gradient(90deg, #F6911D 0%, #EBB632 100%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +90,7 @@ img {
   outline: none;
   padding: 10px 15px;
   width: 100%;
-  max-width: 235px;
+  max-width: 291px;
   color: #fff;
   font-size: 16px;
   font-style: normal;
@@ -85,14 +99,27 @@ img {
   transition: 0.5s all;
   text-align: center;
   gap: 7px;
-  text-transform: uppercase;
+  width: 291px;
+  height: 50px;
+  flex-shrink: 0;
   cursor: pointer;
-
+  transition: 0.5s all;
+   @include transition(all 300ms ease);
   &:hover {
-    background-color: #8f1313;
+   
     color: #fff;
   }
-
+  .label{
+    color: #023766;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    @include efects-underline(#023766);
+  }
   &.whatsapp {
     display: inline-flex;
     align-items: center;

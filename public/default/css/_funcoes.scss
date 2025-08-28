@@ -137,3 +137,55 @@
         }
     }
 }
+
+
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+@mixin transition($args...) {
+	@include css3-prefix("transition", $args);
+}
+@mixin efects-underline($color) {
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		right: 50%;
+		bottom: 0;
+		background: $color;
+		height: 0;
+		@include transition(all 300ms ease);
+	}
+
+	&:hover:after {
+		left: 0;
+		right: 0;
+		height: 1px;
+	}
+}
+@mixin underline-hover($color: #EBB632, $height: 2px, $duration: 0.3s) {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: $height;
+    background-color: $color;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $duration ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

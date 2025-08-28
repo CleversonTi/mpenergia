@@ -335,4 +335,25 @@ class HelpersController extends Controller
 
         dd($aa);
     }
+     /**
+     * Função que verifica se existe imagem webp, caso exista retorna o caminho dela
+     * caso não exista retorna o caminho da imagem original
+     * @param string $imageUrl
+     * @return string
+     */
+    static function getImage(string $imageUrl = ''): string
+    {
+        if (empty($imageUrl)) {
+            return '';
+        }
+
+        $fileName = pathinfo($imageUrl, PATHINFO_FILENAME);
+        $fileName = str_replace(' ', '', $fileName);
+        $fileExtension = pathinfo($imageUrl, PATHINFO_EXTENSION);
+        $path = public_path("uploads/". $fileName.$fileExtension.'.webp');
+        if (file_exists($path)) {
+            return "uploads/". $fileName.$fileExtension.'.webp';
+        }
+        return $imageUrl;
+    }
 }

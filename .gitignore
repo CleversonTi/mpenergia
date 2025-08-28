@@ -3,3 +3,4 @@ bkp-wp/
 app-raddar/
 app-raddar/*
 /old/
+node_modules/*

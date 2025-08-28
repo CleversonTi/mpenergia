@@ -183,16 +183,28 @@ img {
   background-position: center;
 }
 
+.icon {
+  width: 49px;
+  height: 49px;
+  background-color: none;
+  border: 1px solid #023766;
+  border-radius: 50px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-phone {
   display: flex;
   gap: 5px;
   cursor: pointer;
 }
 .main-phone .icon {
-  width: 41px;
-  height: 41px;
-  background-color: #599AA8;
-  border: 1px solid #007f92;
+  width: 49px;
+  height: 49px;
+  background-color: none;
+  border: 1px solid #023766;
   border-radius: 50px;
   display: flex;
   align-content: center;
@@ -203,19 +215,20 @@ img {
   font-size: 16px;
   font-style: normal;
 }
-.main-phone .info .label {
-  font-weight: 600;
-  display: block;
-  color: #10404B;
-}
-.main-phone .info .number {
+.main-phone .info .label, .main-phone .info .number {
+  color: #023766;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-  display: block;
-  color: #10404B;
+  line-height: normal;
+}
+.main-phone .info .label {
+  font-weight: 700;
 }
 .main-phone.zap .icon {
-  background-color: #70AA7D;
-  border: 1px solid #489c5e;
+  background-color: transparent;
+  border: 1px solid #023766;
 }
 .main-phone.blue-icon .icon {
   background-color: #307BC4;
@@ -227,7 +240,7 @@ img {
 
 .main-cta {
   border-radius: 10px;
-  background-color: #D32020;
+  background: linear-gradient(90deg, #F6911D 0%, #EBB632 100%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -235,7 +248,7 @@ img {
   outline: none;
   padding: 10px 15px;
   width: 100%;
-  max-width: 235px;
+  max-width: 291px;
   color: #fff;
   font-size: 16px;
   font-style: normal;
@@ -244,12 +257,40 @@ img {
   transition: 0.5s all;
   text-align: center;
   gap: 7px;
-  text-transform: uppercase;
+  width: 291px;
+  height: 50px;
+  flex-shrink: 0;
   cursor: pointer;
+  transition: 0.5s all;
+  transition: all 300ms ease;
 }
 .main-cta:hover {
-  background-color: #8f1313;
   color: #fff;
+}
+.main-cta .label {
+  color: #023766;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+}
+.main-cta .label:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #023766;
+  height: 0;
+  transition: all 300ms ease;
+}
+.main-cta .label:hover:after {
+  left: 0;
+  right: 0;
+  height: 1px;
 }
 .main-cta.whatsapp {
   display: inline-flex;
@@ -394,7 +435,7 @@ img {
 }
 
 section.header {
-  background-image: url("../image/bg-header.jpg");
+  background-image: url("../image/bg-header.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 20px 0 0 0;
@@ -1125,6 +1166,171 @@ body main ul.paginacao li a {
 body main ul.paginacao li a.active, body main ul.paginacao li a:hover {
   background-color: #10404B;
   color: white;
+}
+body main section.index-banner {
+  position: relative;
+}
+body main section.index-banner .owl-height, body main section.index-banner .owl-stage, body main section.index-banner .owl-item {
+  height: 100% !important;
+}
+body main section.index-banner .item-banner {
+  height: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body main section.index-banner .item-banner .content-banner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+body main section.index-banner .item-banner .banner-content-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body main section.index-banner .item-banner .btn-special {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body main section.index-banner .item-banner .btn-special span {
+  color: #023766;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+body main section.index-banner .item-banner .title-text {
+  font-size: 36px;
+  line-height: 1;
+  color: #EBB632;
+  font-family: "DM Sans";
+  font-size: 35px;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+body main section.index-banner .item-banner .title-text p {
+  margin-bottom: 0;
+}
+body main section.index-banner .item-banner .title-text, body main section.index-banner .item-banner .description-text {
+  font-family: Manrope;
+}
+body main section.index-banner .item-banner .description-text {
+  color: #FFF;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+body main section.index-banner .item-banner .banner-content {
+  display: flex;
+  flex-direction: column;
+}
+body main section.index-banner #bannerMobile .title-text {
+  font-size: 22px;
+}
+body main section.index-banner #bannerMobile .owl-stage-outer {
+  height: 100vh !important;
+  min-height: 300px;
+  max-height: 400px;
+}
+body main section.index-banner #bannerMobile .item-banner {
+  min-height: 300px;
+  max-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body main section.index-banner #bannerMobile .description-text, body main section.index-banner #bannerMobile .btn-special {
+  font-size: 14px;
+}
+body main section.index-banner #bannerMobile .description-text span, body main section.index-banner #bannerMobile .description-text p, body main section.index-banner #bannerMobile .btn-special span, body main section.index-banner #bannerMobile .btn-special p {
+  font-size: 14px;
+}
+body main section.index-banner #bannerDesktop .owl-stage-outer {
+  height: 100vh !important;
+  min-height: 300px;
+  max-height: 400px;
+}
+body main section.index-banner #bannerDesktop .item-banner {
+  min-height: 300px;
+  max-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body main .featured-results {
+  background: #fff;
+  padding-block: 3rem;
+}
+body main .featured-results .ietm-card {
+  flex-shrink: 0;
+  max-width: 297px;
+}
+@media (max-width: 767.98px) {
+  body main .featured-results {
+    padding-block: 2rem;
+  }
+}
+body main .featured-results .result-card {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25.3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (min-width: 768px) {
+  body main .featured-results .result-card {
+    padding: 1.5rem;
+  }
+}
+body main .featured-results .result-card .result-icon {
+  margin-bottom: 0.5rem;
+}
+body main .featured-results .result-card .result-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+body main .featured-results .result-card .result-icon i {
+  font-size: 2rem;
+  line-height: 1;
+}
+body main .featured-results .result-card .result-number span {
+  color: #023766;
+  font-family: "DM Sans";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+body main .featured-results .result-card .result-desc {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+body main .featured-results .result-card .result-desc span {
+  color: #323232;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+body main .featured-results .result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 body main section.index-linha-produtos {
   position: relative;

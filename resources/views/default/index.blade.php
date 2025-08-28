@@ -6,6 +6,10 @@
 @section('content')
 
         @include('default.index.banner')
+        @include('default.index.FeaturedResults');
+        @include('default.energy.energy-cards')
+
+
         @include('default.index.index-linha-produtos')
         @include('default.index.index-destaque-produtos',[
             'class_destaque'=>'bg-destaque-hospitalar',

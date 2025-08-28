@@ -76,9 +76,9 @@ $version = '?raddarAtt=' . md5('08/01/25 21:57');
         {!! $config['tagBody'] !!}
         @endif
 
-        <header>
+         <header>
             @include('default.includes.barra-lgpd')
-{{--            @include('default.includes.header')--}}
+            @include('default.includes.header')
         </header>
 
         <main>

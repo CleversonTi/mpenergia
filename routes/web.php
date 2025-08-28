@@ -26,6 +26,7 @@ use App\Http\Controllers\Funcoes\ApiController;
 use App\Http\Controllers\Funcoes\UploadController;
 use App\Http\Controllers\Site\ContatoController;
 use App\Http\Controllers\Site\SobreController;
+use App\Http\Controllers\Site\EnergiaController;
 
 /*  Index   */
 
@@ -33,12 +34,13 @@ Route::namespace('Site')->group(function () {
 
 
 
-
     /*  PAGE TESTE  */
     Route::get(PluginController::obterUrl(SiteController::PAGE_TEST).'/{categoria?}', [PaginaTesteController::class, 'index'])->name('teste');
 
 
-
+    
+    /* Energia  */
+    Route::get(PluginController::obterUrl(SiteController::PAGE_ENERGIA), [EnergiaController::class, 'index'])->name('sobre');
 
 
 
