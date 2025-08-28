@@ -71,83 +71,106 @@ class HelpersController extends Controller
         } else return FALSE;
     }
 
-    static function gerarImg($img, $webp = true, $class = '', $gerarLink = true, $abrirModal = false)
-    {
-        
+   public static function gerarImg(
+        $img,
+        $webp = true,
+        $class = '',
+        $gerarLink = true,
+        $abrirModal = false,
+        $loading = false,
+        $decoding = false,
+        $itemprop = ''
+    ) {
+        // --- Normaliza quando vier "galeria" (array de imagens) ---
+        if (is_array($img) && isset($img[0]) && is_array($img[0])) {
+            // Usa a primeira imagem da galeria por padrão
+            $img = $img[0];
+        }
+
         if (is_array($img)) {
-            $link = !empty($img['link']) ? $img['link'] : '';
-            $url = !empty($img['url']) ? $img['url'] : '';
-            $urlWebp = !empty($img['url']) ? self::urlWebp($img['url']) : '';
-            $url_directory = !empty($img['url']) ? public_path($img['url']) : '';
-            $urlWebp_directory = !empty($img['url']) ? public_path($urlWebp) : '';
-            $alt = !empty($img['alt']) ? $img['alt'] : '';
-            $blank = !empty($img['blank']) ? 'target="_blank"' : '';;
-            $status = !empty($img['status']) ? true : false;
+            $link   = $img['link']   ?? '';
+            $url    = $img['url']    ?? '';
+            $urlWebp = $url ? self::urlWebp($url) : '';
+            $url_directory     = $url ? public_path($url) : '';
+            $urlWebp_directory = $urlWebp ? public_path($urlWebp) : '';
+            $altRaw = $img['alt'] ?? '';
+            if ($altRaw === '' || $altRaw === null) {
+                $altRaw = $img['titulo'] ?? '';
+            }
+            if ($altRaw === '' || $altRaw === null) {
+                $altRaw = !empty($img['descricao']) ? trim(strip_tags($img['descricao'])) : '';
+            }
+            if ($altRaw === '' || $altRaw === null) {
+                $altRaw = $url ? pathinfo($url, PATHINFO_FILENAME) : '';
+            }
+            $alt    = $altRaw;
+            $blank  = !empty($img['blank']) ? 'target="_blank" rel="noopener"' : '';
+            $status = array_key_exists('status', $img) ? (bool)$img['status'] : true;
 
             if (empty($url)) {
-                return;
+                return null;
             }
         } else {
-            $link = '';
-            $url = $img;
-            $urlWebp = '';
-            $alt = $img;
-            $blank = '';;
+            // quando $img for só string (url)
+            $link   = '';
+            $url    = (string)$img;
+            $urlWebp = $webp ? self::urlWebp($url) : '';
+            $url_directory     = public_path($url);
+            $urlWebp_directory = $webp ? public_path($urlWebp) : '';
+            $alt    = pathinfo($url, PATHINFO_FILENAME);
+            $blank  = '';
             $status = true;
-
-            if ($webp) {
-                $url = $img;
-                $urlWebp = self::urlWebp($img);
-                $url_directory = public_path($img);
-                $urlWebp_directory = public_path($urlWebp);
-            }
         }
-
 
         if (empty($status)) {
-            return;
+            return null;
         }
 
+        // Atributos opcionais (só imprime se vierem)
+        $extraAttrs = '';
+        if ($loading)  $extraAttrs .= ' loading="' . e($loading) . '"';
+        if ($decoding) $extraAttrs .= ' decoding="' . e($decoding) . '"';
+        if ($itemprop) $extraAttrs .= ' itemprop="' . e($itemprop) . '"';
 
-        $html = '<img src="##url##" class="##class##" alt="##alt##">';
+        // HTML base
+        $html = '<img src="##url##" class="##class##" alt="##alt##"##extra##>';
 
-
-        /*  Webp    */
-        if (!empty($webp) && !empty($urlWebp) && file_exists($url_directory)) {
-
-            if (!file_exists($urlWebp_directory)) {
-                if (function_exists('imagewebp')) {
-                    self::saveWebp($url_directory, $urlWebp_directory);
-                }
+        // WebP
+        if (!empty($webp) && !empty($urlWebp) && $url_directory && file_exists($url_directory)) {
+            if (!file_exists($urlWebp_directory) && function_exists('imagewebp')) {
+                self::saveWebp($url_directory, $urlWebp_directory);
             }
-
-            if (file_exists($urlWebp_directory)) {
+            if ($urlWebp_directory && file_exists($urlWebp_directory)) {
                 $html = '<picture><source srcset="##urlWebp##" type="image/webp">' . $html . '</picture>';
             }
         }
 
-
-        /*  Link    */
+        // Link
         if (!empty($link) && !empty($gerarLink) && empty($abrirModal)) {
-            $html = '    <a href="##link##"  ##blank## >' . $html . '</a>';
+            $html = '<a href="##link##" ##blank##>' . $html . '</a>';
         }
 
-        /*  Abrir Modal*/
+        // Modal
         if (!empty($abrirModal)) {
-            $html = '    <a href="" data-bs-toggle="modal" data-bs-target="#' . $abrirModal . '" >' . $html . '</a>';
+            $html = '<a href="" data-bs-toggle="modal" data-bs-target="#' . e($abrirModal) . '">' . $html . '</a>';
         }
 
+        // Substituições
         $html = str_replace('##link##', $link, $html);
         $html = str_replace('##url##', $url, $html);
         $html = str_replace('##urlWebp##', $urlWebp, $html);
-        $html = str_replace('##alt##', $alt, $html);
+        $html = str_replace('##alt##', e($alt), $html);
         $html = str_replace('##blank##', $blank, $html);
-        $html = str_replace('##class##', $class, $html);
+        $html = str_replace('##class##', e($class), $html);
+        $html = str_replace('##extra##', $extraAttrs, $html);
 
         return $html;
     }
 
-    static function saveWebp($url_directory, $urlWebp_directory)
+
+
+    
+        static function saveWebp($url_directory, $urlWebp_directory)
     {
 
 
