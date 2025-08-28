@@ -1,5 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* CLASSES GLOBAIS */
 .has-error {
   border-color: red !important;
@@ -111,8 +111,10 @@ a:hover, a:focus, a:active, a:focus {
 .card-produto-padrao .img-produto img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 .card-produto-padrao .title-in {
   color: #243352;
@@ -140,7 +142,8 @@ a:hover, a:focus, a:active, a:focus {
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
@@ -169,8 +172,10 @@ a:hover, a:focus, a:active, a:focus {
 }
 
 img {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 * {
@@ -396,7 +401,8 @@ section.header {
 }
 section.header .logo {
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 section.header .header-row-1 {
   border-bottom: 2px solid #B4B4B4;
@@ -504,7 +510,8 @@ section.header .header-row-3 ul.categorias-principais li a .icon {
 section.header .header-row-3 ul.categorias-principais li a .icon img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 section.header .header-row-3 ul.categorias-principais li a .title-in {
   color: #FFF;
@@ -685,16 +692,14 @@ section.barra-lgpd .button a {
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 20px;
-  /* 125% */
+  line-height: 20px; /* 125% */
 }
 section.barra-lgpd .text {
   color: var(--Texto-1, #141414);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
-  /* 142.857% */
+  line-height: 20px; /* 142.857% */
 }
 section.barra-lgpd .text a {
   font-weight: 700;
@@ -869,8 +874,8 @@ body .modal-body iframe {
     font-size: 15px;
   }
   body .modal-body form input,
-body .modal-body form select,
-body .modal-body form textarea {
+  body .modal-body form select,
+  body .modal-body form textarea {
     font-size: 14px;
   }
 }
@@ -1032,8 +1037,7 @@ body main section.header-conteudo .box-header-in .description-in h1, body main s
   font-size: 33.835px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 43.985px */
+  line-height: 130%; /* 43.985px */
 }
 body main section.header-conteudo.small {
   min-height: unset;
@@ -1143,8 +1147,7 @@ body main section.index-linha-produtos .back-blue .linha-produtos-title {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 41.6px */
+  line-height: 130%; /* 41.6px */
   position: relative;
   z-index: 1;
   padding: 30px 0;
@@ -1190,8 +1193,10 @@ body main section.index-linha-produtos .box-categorias .box-categoria-produto .i
 body main section.index-linha-produtos .box-categorias .box-categoria-produto .icon img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 body main section.index-linha-produtos .box-categorias .box-categoria-produto .title-in {
   display: block;
@@ -1277,7 +1282,8 @@ body main section.index-destaque-produtos .row-head-title-destaque a {
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
@@ -1300,7 +1306,7 @@ body main section.index-destaque-produtos.bg-destaque-estetica ul.carousel-tool-
   background-color: rgba(255, 255, 255, 0.16);
 }
 body main section.index-destaque-produtos.bg-destaque-estetica ul.carousel-tool-dots .custom-dots-destaque-in.active, body main section.index-destaque-produtos.bg-destaque-estetica ul.carousel-tool-dots .custom-dots-destaque-in:hover, body main section.index-destaque-produtos.bg-produto-relacionados ul.carousel-tool-dots .custom-dots-destaque-in.active, body main section.index-destaque-produtos.bg-produto-relacionados ul.carousel-tool-dots .custom-dots-destaque-in:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 body main section.index-destaque-produtos.bg-destaque-estetica {
   background-image: url("../image/bg-destaque-estetica.jpg");
@@ -1328,7 +1334,8 @@ body main section.index-mais-que-produtos .img-principal-box {
 body main section.index-mais-que-produtos .img-principal-box .img-principal {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-mais-que-produtos .conteudo-main-box {
   padding-left: 20px;
@@ -1417,7 +1424,8 @@ body main section.index-vantagens .row-vantagens .box-vantagem .img-in {
 body main section.index-vantagens .row-vantagens .box-vantagem .img-in img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-vantagens .row-vantagens .box-vantagem .title-in {
   color: #FFF;
@@ -1449,7 +1457,8 @@ body main section.index-promo {
 body main section.index-promo .banner-promo {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-quer-saber-mais {
   padding: 65px 0 40px 0;
@@ -1465,7 +1474,8 @@ body main section.index-quer-saber-mais .box-imgs .img-principal {
 body main section.index-quer-saber-mais .box-imgs .img-principal img {
   width: 100%;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-quer-saber-mais .box-imgs .conteudo-box-in {
   border-radius: 16.965px;
@@ -1482,19 +1492,20 @@ body main section.index-quer-saber-mais .box-imgs .conteudo-box-in .txt-in {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 19.2px */
+  line-height: 120%; /* 19.2px */
 }
 body main section.index-quer-saber-mais .box-imgs .conteudo-box-in img {
   width: 100%;
   max-width: 112px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 18px;
 }
 body main section.index-quer-saber-mais .box-imgs .img-secundaria {
   width: 100%;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-quer-saber-mais .texto-form {
   color: #000;
@@ -1513,8 +1524,7 @@ body main section.index-quer-saber-mais .texto-form h1, body main section.index-
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 38.4px */
+  line-height: 120%; /* 38.4px */
 }
 body main section.index-quer-saber-mais form .box-input {
   margin-bottom: 36px;
@@ -1527,8 +1537,7 @@ body main section.index-quer-saber-mais form .box-input label {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 19.2px */
+  line-height: 120%; /* 19.2px */
   margin-bottom: 10px;
 }
 body main section.index-quer-saber-mais form .box-input input:not(.form-check-input),
@@ -1552,6 +1561,9 @@ body main section.index-quer-saber-mais form .box-input textarea, body main sect
 body main section.index-quer-saber-mais form .box-input input:not(.form-check-input) option,
 body main section.index-quer-saber-mais form .box-input textarea option, body main section.index-quer-saber-mais form .box-input select option {
   color: var(--3, #595959);
+}
+body main section.index-quer-saber-mais form .box-input input:not(.form-check-input)::-moz-placeholder, body main section.index-quer-saber-mais form .box-input textarea::-moz-placeholder, body main section.index-quer-saber-mais form .box-input select::-moz-placeholder {
+  color: #9f9f9f;
 }
 body main section.index-quer-saber-mais form .box-input input:not(.form-check-input)::placeholder,
 body main section.index-quer-saber-mais form .box-input textarea::placeholder, body main section.index-quer-saber-mais form .box-input select::placeholder {
@@ -1579,7 +1591,8 @@ body main section.index-quer-saber-mais form button.main-cta {
   body main section.index-quer-saber-mais .box-imgs .img-principal img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   body main section.index-quer-saber-mais .texto-form {
     text-align: center;
@@ -1610,8 +1623,7 @@ body main section.index-fornecedores h2 {
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 38.4px */
+  line-height: 120%; /* 38.4px */
   margin-bottom: 26px;
 }
 body main section.index-fornecedores .thumb-fornecedores {
@@ -1623,7 +1635,8 @@ body main section.index-fornecedores .thumb-fornecedores {
 body main section.index-fornecedores .thumb-fornecedores img {
   width: 100%;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-fornecedores .box-depoimentos {
   padding: 60px 0 60px;
@@ -1672,8 +1685,7 @@ body main section.index-fornecedores .box-depoimentos .box-list-depoimentos-left
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 26px */
+  line-height: 130%; /* 26px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -1763,7 +1775,8 @@ body main section.index-sobre .box-logo {
 body main section.index-sobre .box-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.index-sobre .title-in {
   display: flex;
@@ -1819,7 +1832,8 @@ body main section.index-sobre .box-carousel .mais18 {
 body main section.index-sobre .box-carousel .owl-carousel .owl-item .box-img-in img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
 }
 body main section.index-sobre .box-carousel .owl-carousel .owl-item:not(.center) {
@@ -1916,7 +1930,8 @@ body main section.index-instagram .box-insta-main .box-insta-right a img {
   height: 100%;
   max-width: 222px;
   max-height: 222px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 9px;
 }
 @media (max-width: 991px) {
@@ -1954,8 +1969,7 @@ body main section.index-blog h2 {
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 38.4px */
+  line-height: 120%; /* 38.4px */
   margin-bottom: 36px;
 }
 body main section.index-blog .blog-card {
@@ -1964,7 +1978,8 @@ body main section.index-blog .blog-card {
 body main section.index-blog .blog-card .blog-img {
   width: 100%;
   height: 300px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15.023px;
   overflow: hidden;
   margin-bottom: 22px;
@@ -1979,8 +1994,7 @@ body main section.index-blog .blog-card h3 {
   font-family: Kanit;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 28.844px */
+  line-height: 120%; /* 28.844px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -2001,8 +2015,7 @@ body main section.index-blog .blog-card .resumo {
   font-size: 13.521px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  /* 18.929px */
+  line-height: 140%; /* 18.929px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -2024,7 +2037,8 @@ body main section.index-blog .blog-card .continue {
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
@@ -2104,8 +2118,7 @@ body main section.page-sobre section.sobre-nos .texto-sobre-nos h1, body main se
   font-family: Kanit;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 38.4px */
+  line-height: 120%; /* 38.4px */
 }
 body main section.page-sobre section.sobre-nos .img-sobre-main {
   position: relative;
@@ -2118,7 +2131,8 @@ body main section.page-sobre section.sobre-nos .img-sobre-main .mais18 {
 body main section.page-sobre section.sobre-nos .img-sobre-main .sobre-nos-img {
   max-height: 386px;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 20px;
 }
 @media (max-width: 991px) {
@@ -2216,7 +2230,8 @@ body main section.page-sobre section.sobre-galeria-fotos .owl-carousel .galeria-
   display: block;
   max-width: 100%;
   height: 366px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 @media (max-width: 991px) {
@@ -2310,7 +2325,8 @@ body main section.produtos-left-bar .list-marcas a.active::after {
 body main section.produtos-left-bar .list-marcas a img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.produtos-left-bar ul.categorias {
   margin: 0;
@@ -2408,7 +2424,8 @@ body main section.page-produto .page-produto-in .box-produto-imgs .box-galeria a
 body main section.page-produto .page-produto-in .box-produto-imgs .box-galeria a img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.page-produto .page-produto-in .box-produto-imgs .img-principal {
   background: #FFF;
@@ -2428,7 +2445,8 @@ body main section.page-produto .page-produto-in .box-produto-imgs .img-principal
 body main section.page-produto .page-produto-in .box-produto-imgs .img-principal img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.page-produto .page-produto-in .titulo-produto {
   color: #243352;
@@ -2436,8 +2454,7 @@ body main section.page-produto .page-produto-in .titulo-produto {
   font-size: 33.835px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 43.985px */
+  line-height: 130%; /* 43.985px */
   text-transform: uppercase;
   margin-bottom: 27px;
 }
@@ -2450,8 +2467,7 @@ body main section.page-produto .page-produto-in .box-info-produto ul.nav-tabs li
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
-  /* 27px */
+  line-height: 150%; /* 27px */
   outline: none;
   border-radius: 0;
 }
@@ -2473,8 +2489,7 @@ body main section.page-produto .page-produto-in .box-info-produto .tab-content {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 203%;
-  /* 36.54px */
+  line-height: 203%; /* 36.54px */
 }
 body main section.page-produto .page-produto-in .box-info-produto .tab-content .produto-descricao {
   margin-bottom: 10px;
@@ -2500,8 +2515,7 @@ body main section.page-produto .page-produto-in .variacoes .box-variacao label {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
-  /* 27px */
+  line-height: 150%; /* 27px */
   margin-bottom: 10px;
 }
 body main section.page-produto .page-produto-in .variacoes .box-variacao select {
@@ -2609,8 +2623,7 @@ body main section.page-fornecedores .page-fornecedores-main .page-texto {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
-  /* 20.8px */
+  line-height: 130%; /* 20.8px */
   max-width: 895px;
   margin: 0 auto 48px auto;
 }
@@ -2620,8 +2633,7 @@ body main section.page-fornecedores .page-fornecedores-main .page-texto h1, body
   font-size: 33.835px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 43.985px */
+  line-height: 130%; /* 43.985px */
   margin-bottom: 27px;
 }
 body main section.page-fornecedores .page-fornecedores-main .rows-fornecedores {
@@ -2644,7 +2656,8 @@ body main section.page-fornecedores .page-fornecedores-main .rows-fornecedores .
 body main section.page-fornecedores .page-fornecedores-main .rows-fornecedores .img-fornecedor img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 991px) {
   body main section.page-fornecedores .page-fornecedores-main .page-texto h1, body main section.page-fornecedores .page-fornecedores-main .page-texto h2 {
@@ -2668,8 +2681,7 @@ body main section.page-depoimentos .page-depoimentos-main .page-texto {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
-  /* 20.8px */
+  line-height: 130%; /* 20.8px */
   max-width: 895px;
   margin: 0 auto 48px auto;
 }
@@ -2679,8 +2691,7 @@ body main section.page-depoimentos .page-depoimentos-main .page-texto h1, body m
   font-size: 33.835px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 43.985px */
+  line-height: 130%; /* 43.985px */
   margin-bottom: 27px;
 }
 body main section.page-depoimentos .page-depoimentos-main .box-depoimento {
@@ -2698,8 +2709,7 @@ body main section.page-depoimentos .page-depoimentos-main .box-depoimento .depoi
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%;
-  /* 20.8px */
+  line-height: 125%; /* 20.8px */
   margin-bottom: 15px;
   overflow: hidden;
   display: -webkit-box;
@@ -2714,8 +2724,7 @@ body main section.page-depoimentos .page-depoimentos-main .box-depoimento .autor
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%;
-  /* 26px */
+  line-height: 130%; /* 26px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -2729,8 +2738,7 @@ body main section.page-depoimentos .page-depoimentos-main .box-depoimento .empre
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
-  /* 26px */
+  line-height: 130%; /* 26px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -2869,6 +2877,9 @@ body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input i
 body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input textarea option, body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input select option {
   color: var(--3, #595959);
 }
+body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input input:not(.form-check-input)::-moz-placeholder, body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input textarea::-moz-placeholder, body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input select::-moz-placeholder {
+  color: #9f9f9f;
+}
 body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input input:not(.form-check-input)::placeholder,
 body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input textarea::placeholder, body main section.page-duvidas .page-duvidas-main .box-form-duvidas .box-input select::placeholder {
   color: #9f9f9f;
@@ -2909,7 +2920,8 @@ body main section.page-blog .page-blog-in .blog-card .blog-card-img {
 body main section.page-blog .page-blog-in .blog-card .blog-card-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px;
 }
 body main section.page-blog .page-blog-in .blog-card .blog-card-text {
@@ -2922,8 +2934,7 @@ body main section.page-blog .page-blog-in .blog-card .blog-card-text h3 {
   font-family: Kanit;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-  /* 28.844px */
+  line-height: 120%; /* 28.844px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -2944,8 +2955,7 @@ body main section.page-blog .page-blog-in .blog-card .blog-card-text .resumo {
   font-size: 13.521px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  /* 18.929px */
+  line-height: 140%; /* 18.929px */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -2967,7 +2977,8 @@ body main section.page-blog .page-blog-in .blog-card .blog-card-text .continue {
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
@@ -3022,7 +3033,8 @@ body main section.blog-interna .blog-interna-main .txt-blog-in .img-principal {
 body main section.blog-interna .blog-interna-main .txt-blog-in .img-principal img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body main section.blog-interna .blog-interna-main .txt-blog-in .conteudo-in {
   font-family: Manrope;
@@ -3120,7 +3132,8 @@ body main section.page-contato .page-contato-main .box-card-contato .box-card-le
 body main section.page-contato .page-contato-main .box-card-contato .box-card-left .box-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body main section.page-contato .page-contato-main .box-card-contato .box-card-left .box-text-info {
   color: #161616;
@@ -3222,6 +3235,9 @@ body main section.page-contato .page-contato-main .box-card-contato form .box-in
 body main section.page-contato .page-contato-main .box-card-contato form .box-input input:not(.form-check-input) option,
 body main section.page-contato .page-contato-main .box-card-contato form .box-input textarea option, body main section.page-contato .page-contato-main .box-card-contato form .box-input select option {
   color: var(--3, #595959);
+}
+body main section.page-contato .page-contato-main .box-card-contato form .box-input input:not(.form-check-input)::-moz-placeholder, body main section.page-contato .page-contato-main .box-card-contato form .box-input textarea::-moz-placeholder, body main section.page-contato .page-contato-main .box-card-contato form .box-input select::-moz-placeholder {
+  color: #9f9f9f;
 }
 body main section.page-contato .page-contato-main .box-card-contato form .box-input input:not(.form-check-input)::placeholder,
 body main section.page-contato .page-contato-main .box-card-contato form .box-input textarea::placeholder, body main section.page-contato .page-contato-main .box-card-contato form .box-input select::placeholder {
@@ -3408,6 +3424,9 @@ body main section.page-programa .page-programa-main form .box-input input:not(.f
 body main section.page-programa .page-programa-main form .box-input textarea option, body main section.page-programa .page-programa-main form .box-input select option {
   color: var(--3, #595959);
 }
+body main section.page-programa .page-programa-main form .box-input input:not(.form-check-input)::-moz-placeholder, body main section.page-programa .page-programa-main form .box-input textarea::-moz-placeholder, body main section.page-programa .page-programa-main form .box-input select::-moz-placeholder {
+  color: #9f9f9f;
+}
 body main section.page-programa .page-programa-main form .box-input input:not(.form-check-input)::placeholder,
 body main section.page-programa .page-programa-main form .box-input textarea::placeholder, body main section.page-programa .page-programa-main form .box-input select::placeholder {
   color: #9f9f9f;
@@ -3572,10 +3591,10 @@ body main section.carrinho .passos a:hover.ativo {
 }
 body main section.carrinho .carrinho-mobile {
   margin-top: 20px;
-  border-top: 1px solid #dcdcdc4d;
+  border-top: 1px solid rgba(220, 220, 220, 0.3019607843);
 }
 body main section.carrinho .carrinho-mobile .produto {
-  border-bottom: 1px solid #dcdcdc4d;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.3019607843);
   display: flex;
   margin: 0;
   padding: 20px 0;
@@ -3584,7 +3603,8 @@ body main section.carrinho .carrinho-mobile .produto {
 body main section.carrinho .carrinho-mobile .produto img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main section.carrinho .carrinho-mobile .removerMobile {
   color: red;
@@ -3680,7 +3700,7 @@ body main section.carrinho .tabela-carrinho thead td {
   padding: 20px 30px;
   font-size: 18px;
   font-weight: 500;
-  border: 1px solid #dcdcdc4d;
+  border: 1px solid rgba(220, 220, 220, 0.3019607843);
 }
 body main section.carrinho .tabela-carrinho thead td:first-child {
   border-left: none;
@@ -3693,7 +3713,7 @@ body main section.carrinho .tabela-carrinho tbody td {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #dcdcdc4d;
+  border: 1px solid rgba(220, 220, 220, 0.3019607843);
 }
 body main section.carrinho .tabela-carrinho tbody td:first-child {
   border-left: none;
@@ -3943,8 +3963,8 @@ body main section.carrinho .form textarea {
     font-size: 16px;
   }
   body main section.carrinho .form input,
-body main section.carrinho .form select,
-body main section.carrinho .form textarea {
+  body main section.carrinho .form select,
+  body main section.carrinho .form textarea {
     font-size: 15px;
     padding: 10px;
   }
@@ -3957,10 +3977,6 @@ body footer section.barra-fixa {
   width: 100%;
   padding: 10px 80px 15px 80px;
   z-index: 600;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 @media (max-width: 991px) {
@@ -4016,7 +4032,8 @@ body footer section.footer .footer-in {
 body footer section.footer .footer-in .logo-rodape {
   width: 100%;
   max-width: 252px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body footer section.footer .footer-in .menu-footer-left, body footer section.footer .footer-in .menu-footer-right {
   display: flex;
@@ -4117,10 +4134,6 @@ body footer section.botao_whatsapp {
   text-align: center;
   right: 30px;
   border-radius: 75px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 body footer section.botao_whatsapp i.fab.fa-whatsapp {
@@ -4172,22 +4185,10 @@ body footer section.modal-whatsapp {
   overflow: hidden;
   z-index: 9999;
   transform-origin: 100% 100%;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 body footer section.modal-whatsapp.exibir {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
   transform: scale(1);
 }
 body footer section.modal-whatsapp.scroll {
@@ -4364,10 +4365,6 @@ body footer .menu-mobile {
   overflow: auto;
   z-index: 998;
   padding-bottom: 65px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   display: flex;
   align-items: center;
@@ -4392,7 +4389,8 @@ body footer .menu-mobile .logo {
 }
 body footer .menu-mobile .logo img {
   height: 70px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-top: 20px;
 }
 body footer .menu-mobile ul {
@@ -4430,4 +4428,4 @@ body footer .menu-mobile ul.blue li a {
   padding: 0 0;
 }
 
-/*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=custom.css.map*/

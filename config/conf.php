@@ -9,7 +9,7 @@ if ($modeDb == 'development') {
     $host = "localhost";
     $porta = 3306;
     $user = "root";
-    $db = "treinamento-raddar-2025";
+    $db = "mp-energia";
     $password = "";
 }
 
