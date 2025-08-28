@@ -43,7 +43,7 @@ img {
     font-style: normal;
     .label, .number {
         color: #023766;
-        font-family: "DM Sans";
+        font-family: $font-primary;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -112,7 +112,7 @@ img {
   .label{
     color: #023766;
     text-align: center;
-    font-family: "DM Sans";
+    font-family: $font-primary;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

@@ -1,0 +1,30 @@
+.featured-energy{
+    .section-title{
+        text-align: center;
+        margin-bottom: 10px;
+        span,strong{
+            font-family:$font-primary;
+            font-size: 35px;
+            font-style: normal;
+        }
+        strong{
+            color: #F6911D;
+            font-weight: 800;
+        }
+        span{
+            color: #023766;
+
+            font-weight: 300;
+        }
+    }
+    .descricao{
+        p{
+            color: #323232;
+            font-family: $font-primary;
+            font-size: 16px;
+            font-style: normal;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+}

@@ -47,6 +47,52 @@ a:hover, a:focus, a:active, a:focus {
 }
 
 /* VARIAVEIS GLOBAIS DO PROJETO */
+/* DM Sans – Minimal (300/400/500/700/800) */
+/* Light 300 */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans18pt-Light.woff2") format("woff2"), url("../fonts/DMSans18pt-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* Regular 400 */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans18pt-Regular.woff2") format("woff2"), url("../fonts/DMSans18pt-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Medium 500 */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans18pt-Medium.woff2") format("woff2"), url("../fonts/DMSans18pt-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Bold 700 */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans18pt-Bold.woff2") format("woff2"), url("../fonts/DMSans18pt-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* ExtraBold 800 */
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans18pt-ExtraBold.woff2") format("woff2"), url("../fonts/DMSans18pt-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
 .card-produto-padrao {
   position: relative;
   width: 309px;
@@ -217,7 +263,7 @@ img {
 }
 .main-phone .info .label, .main-phone .info .number {
   color: #023766;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -270,7 +316,7 @@ img {
 .main-cta .label {
   color: #023766;
   text-align: center;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1199,7 +1245,7 @@ body main section.index-banner .item-banner .btn-special {
 body main section.index-banner .item-banner .btn-special span {
   color: #023766;
   text-align: center;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1209,7 +1255,7 @@ body main section.index-banner .item-banner .title-text {
   font-size: 36px;
   line-height: 1;
   color: #EBB632;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 35px;
   font-style: normal;
   line-height: normal;
@@ -1223,7 +1269,7 @@ body main section.index-banner .item-banner .title-text, body main section.index
 }
 body main section.index-banner .item-banner .description-text {
   color: #FFF;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1310,7 +1356,7 @@ body main .featured-results .result-card .result-icon i {
 }
 body main .featured-results .result-card .result-number span {
   color: #023766;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 800;
@@ -1322,7 +1368,7 @@ body main .featured-results .result-card .result-desc {
 }
 body main .featured-results .result-card .result-desc span {
   color: #323232;
-  font-family: "DM Sans";
+  font-family: "DM Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1331,6 +1377,31 @@ body main .featured-results .result-card .result-desc span {
 body main .featured-results .result-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+body main .featured-energy .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+body main .featured-energy .section-title span, body main .featured-energy .section-title strong {
+  font-family: "DM Sans", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+}
+body main .featured-energy .section-title strong {
+  color: #F6911D;
+  font-weight: 800;
+}
+body main .featured-energy .section-title span {
+  color: #023766;
+  font-weight: 300;
+}
+body main .featured-energy .descricao p {
+  color: #323232;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
 }
 body main section.index-linha-produtos {
   position: relative;
