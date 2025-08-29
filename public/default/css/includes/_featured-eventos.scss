@@ -4,8 +4,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-
-
   .section-title {
     text-align: center; margin: 0 0 28px;
     span, strong { font-family: $font-primary; font-size: 35px; }
@@ -13,62 +11,80 @@
     span   { color: #fff; font-weight: 300; }
   }
 
-  /* grade de 5 colunas no desktop */
+  /* grade com cards de largura fixa (295px) */
   .itens-events {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(5, 295px);  /* 5 por linha no desktop */
+    justify-content: center;                   /* centraliza se sobrar espaço */
 
-    @media (max-width: 1280px) { grid-template-columns: repeat(4, 1fr); }
-    @media (max-width: 992px)  { grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 768px)  { grid-template-columns: repeat(2, 1fr); }
-    @media (max-width: 480px)  { grid-template-columns: 1fr; }
+    @media (max-width: 1280px) { grid-template-columns: repeat(4, 295px); }
+    @media (max-width: 992px)  { grid-template-columns: repeat(3, 295px); }
+    @media (max-width: 768px)  { grid-template-columns: repeat(2, 295px); }
+    @media (max-width: 480px)  { grid-template-columns: 295px; }
   }
 
-  /* “moldura” azul atrás da imagem */
+  /* “moldura” azul e tamanho fixo de cada card */
   .card-events {
-    
+    width: 295px;
+    height: 392px;
+    flex-shrink: 0;                /* (só teria efeito em flexbox) */
     border-radius: 22px;
-    
     box-shadow: 0 16px 32px rgba(0,0,0,.25);
+    display: flex;
   }
 
-  /* card com imagem + título sobreposto */
+  /* card interno preenche a moldura */
   .card {
     position: relative;
     display: block;
-    overflow: hidden;
     border-radius: 16px;
-    transform: translateZ(0); /* melhora o anti-alias do border-radius */
+    overflow: hidden;
+    transform: translateZ(0);
+    height: 100%;
+    width: 100%;
+    
 
     .card-img {
-      width: 100%;
-      height: 240px;                 /* ajuste se quiser mais/menos alto */
-      object-fit: cover;
       display: block;
+      width: 100%;
+      height: 100%;               /* imagem ocupa todo o card */
+      object-fit: cover;
       transition: transform .35s ease;
+      
     }
-
-    /* gradiente no rodapé da imagem */
+    
+    /* gradiente no rodapé para o título */
     &::after {
       content: "";
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
+      position: absolute; left: 0; right: 0; bottom: 0;
       height: 45%;
       background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.8) 100%);
       pointer-events: none;
     }
+    picture{
+         z-index: 0;
+    }
 
     .card-title {
       position: absolute;
-      left: 16px; right: 16px; bottom: 14px;
-      margin: 0;
-      color: #fff;
+      left: 16px; 
+      right: 16px; 
+      bottom: 50px;
+      margin: 0; 
+      color: #fff; 
       font-family: $font-primary;
-      font-weight: 800;
-      font-size: 16px;
+      font-weight: 800; 
+      font-size: 16px; 
       line-height: 1.2;
       text-shadow: 0 2px 6px rgba(0,0,0,.35);
+      z-index: 1;
+      
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-align: center;
     }
 
     &:hover .card-img { transform: scale(1.03); }
