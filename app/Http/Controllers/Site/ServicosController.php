@@ -8,7 +8,7 @@ use App\Http\Controllers\Funcoes\PluginController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-class EnergiaController extends SiteController
+class ServicosController extends SiteController
 {
     public function index()
     {

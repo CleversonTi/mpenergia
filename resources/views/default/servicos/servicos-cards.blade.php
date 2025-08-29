@@ -1,25 +1,26 @@
 
-
-<section id="featured-energy" class="featured-energy">
+@if(!empty( $servicosHome))
+<section id="featured-servicos" class="featured-servicos">
     <div class="container">
-        @if(!empty( $energyHome['titulo-home']) && !empty( $energyHome['sub-titulo-home']))
-          <h2 class="section-title energy">
-            <strong>{{  $energyHome['titulo-home'] }}</strong> 
-            <span>{{  $energyHome['sub-titulo-home'] }}</span>
+       
+        @if(!empty( $servicosHome['titulo-home']) || !empty( $servicosHome['sub-titulo-home']))
+          <h2 class="section-title services">
+            <strong>{{  $servicosHome['titulo-home'] }}</strong> 
+            <span>{{  $servicosHome['sub-titulo-home'] }}</span>
           </h2>
         @endif
 
        
-        @if(!empty( $energyHome['descricao-home']))
-        <div class="descricao energy">
-            <p>{{  $energyHome['descricao-home'] }}</p>
+        @if(!empty( $servicosHome['descricao-home']))
+        <div class="descricao services">
+            <p>{{  $servicosHome['descricao-home'] }}</p>
 
         </div>
         @endif
        
-        <div class="row">
+        <div class="row my-5">
           
-            @forelse($energy as $item)
+            @forelse($servicos as $item)
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
                         {{-- Imagem --}}
@@ -44,14 +45,16 @@
                                 <div class="col-lg-9">
                                     <div class="row-ctas">
                                         @if(!empty($item['uri']))
-                                            <div class="links-energy">
+                                            <div class="links-servicos">
                                                 <a href="{{ $item['uri'] }}" itemprop="url" class="btn btn-primary" aria-label="Saiba mais sobre {{ $item['titulo'] ?? '...' }}">
-                                                    <span class="icon-energy">
-                                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" width="17" height="17"><style>.a{fill:#fff}</style><path fill-rule="evenodd" class="a" d="m8.5 17c-4.7 0-8.5-3.8-8.5-8.5 0-4.7 3.8-8.5 8.5-8.5 4.7 0 8.5 3.8 8.5 8.5 0 4.7-3.8 8.5-8.5 8.5zm0-16c-4.2 0-7.5 3.3-7.5 7.5 0 4.1 3.3 7.5 7.5 7.5 4.1 0 7.5-3.4 7.5-7.5 0-4.2-3.4-7.5-7.5-7.5zm-4.5 7h4v1h-4zm9 0v1h-4v-1zm-5 5h1v-4h-1zm1-9h-1v4h1z"/></svg>
+                                                    <img src="{{ asset('default/image/icon-more.png') }}" 
+                                                        alt="Ícone saiba mais" 
+                                                        class="icon-more">
+                                                    <span>
+                                                       <p>
+                                                             Saiba mais
+                                                       </p>
                                                     </span>
-                                                    <label for="">
-                                                        Saiba mais
-                                                    </label>
                                                 </a>
 
                                             </div>
@@ -73,6 +76,13 @@
             @empty
                 <p>Nenhum item de energia cadastrado.</p>
             @endforelse
+            
+            <div class="row-ctas text-center mt-4 links">
+                <a href="{{ $url }}" class="btn btn-outline-primary btn-lg" aria-label="Conheça todos os serviços">
+                    <span>Conheça todos os serviços</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
+ @endif

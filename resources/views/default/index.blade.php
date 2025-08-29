@@ -7,7 +7,7 @@
 
         @include('default.index.banner')
         @include('default.index.FeaturedResults');
-        @include('default.energy.energy-cards')
+        @include('default.servicos.servicos-cards')
 
 
         @include('default.index.index-linha-produtos')

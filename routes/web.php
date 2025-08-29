@@ -27,6 +27,7 @@ use App\Http\Controllers\Funcoes\UploadController;
 use App\Http\Controllers\Site\ContatoController;
 use App\Http\Controllers\Site\SobreController;
 use App\Http\Controllers\Site\EnergiaController;
+use App\Http\Controllers\Site\ServicosController;
 
 /*  Index   */
 
@@ -39,8 +40,8 @@ Route::namespace('Site')->group(function () {
 
 
     
-    /* Energia  */
-    Route::get(PluginController::obterUrl(SiteController::PAGE_ENERGIA), [EnergiaController::class, 'index'])->name('sobre');
+    /* Servicos  */
+    Route::get(PluginController::obterUrl(SiteController::PAGE_SERVICOS), [ServicosController::class, 'index'])->name('sobre');
 
 
 
