@@ -39,10 +39,48 @@ $(document).ready(function() {
                 dots: true,
                 nav: false,
                 margin: 15,
-                items: 4
+                items: 5
             }
         }
     });
+    var $el = $('.owl-carousel-events');
+    if (!$el.length) return;
+
+        if (!$.fn.owlCarousel) {
+            console.warn('Owl Carousel JS não está carregado.');
+            return;
+        }
+
+    $el.addClass('owl-carousel');
+
+    var total   = $el.children().length;
+    var desktop = window.matchMedia('(min-width: 992px)').matches;
+
+    $el.owlCarousel({
+        mouseDrag: true,
+        autoHeight: true,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        autoplayHoverPause: false,
+        navText: (window.navText || ['‹','›']),
+        loop: desktop ? (total > 5) : (total > 1),
+        responsive: {
+        0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            margin: 0
+        },
+        992: {
+            items: Math.min(5, total),   
+            nav: total > 5,             
+            dots:false,
+            nav: false,
+            margin: 15
+        }
+        }
+    });
+
 
 
     $('.owl-galeria-pagina-teste').owlCarousel({
@@ -61,7 +99,7 @@ $(document).ready(function() {
                 items: 1
             },
             992: {
-                dots: true,
+                dots:false,
                 nav: false,
                 margin: 15,
                 items: 4

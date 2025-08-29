@@ -4,8 +4,8 @@
       <strong>Eventos entregues</strong> <span>com sucesso!</span>
     </h2>
 
-    <div class="itens-events">
-      @forelse(collect($eventosInterna)->take(5) as $e)
+    <div class="itens-events owl-carousel-events">
+      @forelse(collect($eventosInterna) as $e)
         <article class="card-events">
           <a href="{{ $e['uri'] }}" class="card" aria-label="Abrir {{ strip_tags($e['titulo'] ?? 'evento') }}">
             {{-- imagem --}}
@@ -22,3 +22,5 @@
     </div>
   </div>
 </section>
+
+

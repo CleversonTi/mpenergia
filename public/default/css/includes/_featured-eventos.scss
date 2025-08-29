@@ -13,15 +13,20 @@
 
   /* grade com cards de largura fixa (295px) */
   .itens-events {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(5, 295px);  /* 5 por linha no desktop */
-    justify-content: center;                   /* centraliza se sobrar espaço */
-
-    @media (max-width: 1280px) { grid-template-columns: repeat(4, 295px); }
-    @media (max-width: 992px)  { grid-template-columns: repeat(3, 295px); }
-    @media (max-width: 768px)  { grid-template-columns: repeat(2, 295px); }
-    @media (max-width: 480px)  { grid-template-columns: 295px; }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    &.owl-carousel-events{
+        
+        .owl-dots{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+        }
+    }
+    
+    
   }
 
   /* “moldura” azul e tamanho fixo de cada card */
