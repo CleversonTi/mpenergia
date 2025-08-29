@@ -3,8 +3,10 @@
     <h2 class="section-title services">
       <strong>Eventos entregues</strong> <span>com sucesso!</span>
     </h2>
-
-    <div class="itens-events owl-carousel-events">
+    @php
+        $totalEventos = is_countable($eventosInterna ?? []) ? count($eventosInterna) : 0;
+    @endphp
+    <div class="itens-events owl-carousel-events {{ $totalEventos > 5 ? 'loading' : '' }}">
       @forelse(collect($eventosInterna) as $e)
         <article class="card-events">
           <a href="{{ $e['uri'] }}" class="card" aria-label="Abrir {{ strip_tags($e['titulo'] ?? 'evento') }}">
@@ -22,5 +24,8 @@
     </div>
   </div>
 </section>
+
+
+
 
 

@@ -41,6 +41,12 @@
     // anima em cascata leve
     els.forEach((el, i) => setTimeout(() => animate(el), i * DEFAULTS.delayStep));
   }
+  let $wrap = $('.owl-carousel-events.loading');
+  if (!$wrap.length) return;
+
+    $(window).on('load', function () {
+      $wrap.removeClass('loading');
+    });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => initCountups(), { once: true });
