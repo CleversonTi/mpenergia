@@ -21,7 +21,7 @@ class IndexController extends SiteController
         $plugin->setId(SiteController::PAGE_HOME);
         $home = $plugin->obterCampos();
 
-        // Energia
+        //Serviços
         $plugin->setId(SiteController::PAGE_SERVICOS);
 
         $servicosHome = $plugin->obterCampos();
@@ -30,7 +30,20 @@ class IndexController extends SiteController
         $servicosUrl = PluginController::obterUrl(SiteController::PAGE_SERVICOS);
        
         $servicosInterna = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
+
+
+        //Eventos //
         
+        $plugin->setId(SiteController::PAGE_EVENTOS);
+
+        $eventosHome = $plugin->obterCampos();
+        
+        
+        // gera a URL da página de energia
+        $eventosUrl = PluginController::obterUrl(SiteController::PAGE_EVENTOS);
+       
+        $eventosInterna = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
+       
        
 
         // Produtos
@@ -95,6 +108,9 @@ class IndexController extends SiteController
             'url'=>$servicosUrl,
             'servicos' =>  $servicosInterna,
             'servicosHome' =>  $servicosHome,
+            'urlEventos'=>$eventosUrl,
+            'eventosInterna' =>  $eventosInterna,
+            'eventosHome' =>  $eventosHome,
             'produtos_destaques' => $produtos_destaques,
             'fornecedores' => $fornecedores,
             'blog' => $blog,

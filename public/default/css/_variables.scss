@@ -1,9 +1,13 @@
 @import 'fonts';
 // Fonte primária
 $font-primary: 'DM Sans', sans-serif;
+$font-primary: 'DM Sans', sans-serif;
 
 // Exemplo para outra fonte caso precise
 $font-secondary: 'Arial', sans-serif;
+
+$primary-color:  #F6911D;
+$secundary-color:  #023766;
 
 body{
     font-family: $font-primary;
