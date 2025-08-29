@@ -1,7 +1,7 @@
 
 
 <section id="featured-energy" class="featured-energy">
-    <div class="container">
+    <div class="container big">
         @if(!empty( $energyHome['titulo-home']) && !empty( $energyHome['sub-titulo-home']))
           <h2 class="section-title">
             <strong>{{  $energyHome['titulo-home'] }}</strong> 
@@ -28,14 +28,13 @@
                         {{-- Conteúdo --}}
                         <div class="card-body">
                             <h5 class="card-title">{{ $item['titulo'] ?? '' }}</h5>
-
+                        
                             @if(!empty($item['descricao']))
                                 <p class="card-text">
                                     {!! $item['descricao'] !!}
                                 </p>
                             @endif
 
-                            {{-- Botão --}}
                             @if(!empty($item['link']))
                                 <a href="{{ $item['link'] }}" class="btn btn-primary">
                                     Saiba mais

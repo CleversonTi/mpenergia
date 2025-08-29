@@ -43,7 +43,17 @@ $radius:          20px !default;
     }
 
     .result-number {
-        
+        white-space: nowrap;      
+        word-break: keep-all;     
+        overflow-wrap: normal;   
+        line-height: 1;
+        display: inline-flex;
+        align-items: baseline;
+        font-variant-numeric: tabular-nums lining-nums;
+        font-feature-settings: 'tnum' 1, 'lnum' 1;
+        min-width: 8ch; // ajuste conforme o maior valor esperado (dígitos + separadores)
+       
+        will-change: transform;
         span{
             color: #023766;
             font-family: $font-primary;

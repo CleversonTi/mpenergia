@@ -14,7 +14,7 @@
 
 @if(!empty($items) && is_iterable($items))
 <section class="featured-results py-5">
-  <div class="container">
+  <div class="container big">
     <div class="row g-3 g-md-4 justify-content-center">
 
       @foreach($items as $it)

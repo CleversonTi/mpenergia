@@ -14,7 +14,7 @@ $radius:          20px !default;
     padding-block: 3rem;
     .ietm-card {               // (mantive "ietm" como você escreveu)
         flex-shrink: 0;
-        max-width: 297px;
+        max-width: 400px;
   }
   @media (max-width: 767.98px) {
     padding-block: 2rem;
@@ -47,7 +47,7 @@ $radius:          20px !default;
         span{
             color: #023766;
             font-family:$font-primary;
-            font-size: 48px;
+            font-size: 38px;
             font-style: normal;
             font-weight: 800;
             line-height: normal;
