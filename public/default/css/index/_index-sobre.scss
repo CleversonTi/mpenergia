@@ -1,151 +1,164 @@
-section.index-sobre {
-  padding: 60px 0 30px 0;
+/* Seção Sobre – Mais */
+.sobre-mais {
+  background: #f6f8fb; /* cinza bem claro */
+  padding: 72px 0;
 
-  .box-logo {
-    background-image: url("../image/box-white-logo.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 184px;
-    padding: 30px;
-    margin-bottom: 44px;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+  .section-title{
+    text-align: left;
+    margin-bottom: 15px;
+    p{
+      color: $primary-color;
+      font-weight: 800;
+      margin-bottom: 0;
+      &:first-child{
+        color: $secundary-color;
+        font-weight: 300;
+      }
+    }
+  }
+  .container.big { max-width: 1240px; }
 
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 40px;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 28px;
     }
   }
 
-  .title-in {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
 
-    h2 {
-      color: #10404B;
-      font-family: Kanit;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
+  &__desc {
+    margin-bottom:0 0 20px;
+    padding-bottom: 10px;
+    p {
+      font-family: $font-primary;
+      font-size: 16px;
+      line-height: 1.6;
+      color: $text-color;
+      margin-bottom: 0;
+
     }
   }
+  .row-ctas{
+    p {
+        a {
+            border-radius: 10px;
+            border: 1px solid #023766;
+            background: transparent;
+            transition: all 0.3s ease; 
+            padding: 0.9rem 1.2rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 800;
+            
+            color: #023766;
+            font-family: $font-primary;
+            line-height: normal;
+            transition: color 0.3s ease; 
+            margin:0 ;
+            position: relative;
+            @include efects-underline(#fff); 
+            padding: 5px 2px;
+             // Hover
+                    &:hover {
+                        background: #023766;
+                        border-color: #023766;
 
-  .conteudo-sobre {
-    color: #555;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: Kanit;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 28px;
-  }
+                        span {
+                            color: #fff; 
+                           
+                        }
+                    }
 
-  a.main-cta {
-    background-color: transparent;
-    color: #629FAD;
-    text-align: center;
-    font-family: Kanit;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    border-radius: 10px;
-    border: 1px solid #629FAD;
-  }
-
-  .box-carousel {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-
-    .mais18 {
-      position: absolute;
-      top: -37px;
-      right: -58px;
-      z-index: 2;
-    }
-
-
-    .owl-carousel {
-
-      .owl-item {
-        .box-img-in {
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
+                    // Opcional: efeito de foco (acessibilidade)
+                    &:focus {
+                    outline: 3px solid rgba(2, 55, 102, 0.4);
+                    outline-offset: 2px;
+                    }
           }
+      }
+  }
+  
+   .video{
+    .open-video{
+        position: relative;
+        display: grid;
+        grid-template-areas: "video";
+        place-items: center;
+        picture{
+           grid-area: video ; 
+           z-index: 0;
         }
+        svg{
+          grid-area: video ; 
+           z-index: 1;
+        }
+    }
+  }
+}
 
-      }
+/* Thumb de vídeo com frame azul e botão play */
+.video-thumb {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
 
-      .owl-item:not(.center) {
-        scale: 0.8;
-      }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    filter: brightness(.9);
+    transition: transform .35s ease, filter .35s ease;
 
+    @media (max-width: 576px) {
+      max-height: 300px;
     }
   }
 
-  .carousel-tool {
-    margin: 20px 0 0 0;
-    justify-content: center;
+  /* moldura azul fina ao redor da imagem */
+  &__frame {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    pointer-events: none;
+    box-shadow: 0 0 0 3px #1e3f67 inset; /* cor da borda */
+    z-index: 1;
+  }
 
-    .carousel-tool-dots {
-      .custom-dots-destaque-in {
-        display: none;
+  &__play {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+    border: 2px solid #fff;
+    z-index: 2;
+    transition: transform .25s ease, background .25s ease;
 
-      }
-
-      .owl-dot {
-        width: 8.181px;
-        height: 8.181px;
-        border-radius: 8.181px;
-        background-color: #d9d9d9;
-        transition: 0.3s all;
-        cursor: pointer;
-        padding: 0;
-        border: none;
-
-        &.active, &:hover {
-          background-color: #171717;
-        }
-      }
-
-
+    /* ícone (triângulo) */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-40%, -50%);
+      width: 0; height: 0;
+      border-left: 18px solid #fff;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
     }
   }
 
-  @media(max-width: 991px) {
-    text-align: center;
-    padding: 30px 0;
-    .box-logo {
-      max-width: 150px;
-      height: auto;
-      margin: 0 auto 15px auto;
-    }
-    .title-in {
-      h2 {
-        font-size: 25px;
-
-      }
-    }
-    .box-carousel {
-      margin-top: 30px;
-      .mais18 {
-        height: 115px;
-        right: 0;
-        top: 0;
-      }
-    }
+  &:hover {
+    .video-thumb__img { transform: scale(1.02); filter: brightness(1); }
+    .video-thumb__play { transform: translate(-50%, -50%) scale(1.06); background: rgba(255,255,255,.28); }
   }
 }

@@ -80,6 +80,66 @@ img {
 
 }
 
+.section-title {
+    text-align: center; margin: 0 0 28px;
+    span, strong,p { font-family: $font-primary; font-size: 35px; }
+    strong { color: $primary-color; font-weight: 800; }
+    span   { color: #fff; font-weight: 300; }
+}
+.row-ctas {
+        &.links {
+            .btn {
+                &.btn-outline-primary {
+                    border-radius: 10px;
+                    border: 1px solid #023766;
+                    background: transparent;
+                    transition: all 0.3s ease; 
+                    padding: 0.9rem 1.2rem;
+                    cursor: pointer;
+                    span {
+                         font-size: 1rem;
+                            font-weight: 800;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 0.5rem;
+                            color: #023766;
+                            font-family: $font-primary;
+                            line-height: normal;
+                            transition: color 0.3s ease; 
+                            margin:0 ;
+                            position: relative;
+                            @include efects-underline(#fff); 
+                            padding: 5px 2px;
+
+                        p{
+                           
+                            
+                        }
+                    }
+
+                    // Hover
+                    &:hover {
+                        background: #023766;
+                        border-color: #023766;
+
+                        span {
+                            color: #fff; 
+                           
+                        }
+                    }
+
+                    // Opcional: efeito de foco (acessibilidade)
+                    &:focus {
+                    outline: 3px solid rgba(2, 55, 102, 0.4);
+                    outline-offset: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+
 .main-cta {
   border-radius: 10px;
   background: linear-gradient(90deg, #F6911D 0%, #EBB632 100%);

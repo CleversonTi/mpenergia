@@ -4,11 +4,13 @@
 @extends('default.template')
 
 @section('content')
-
+       
         @include('default.index.banner')
-        @include('default.index.FeaturedResults');
-        @include('default.servicos.servicos-cards');
-        @include('default.eventos.eventos-cards');
+        @include('default.index.FeaturedResults')
+        @include('default.servicos.servicos-cards')
+        @include('default.eventos.eventos-cards')
+        @include('default.index.index-sobre-mais')
+        @include('default.index.index-sobre-mais')
 
 
         @include('default.index.index-linha-produtos')
