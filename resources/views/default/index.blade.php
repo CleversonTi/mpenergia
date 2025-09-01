@@ -10,7 +10,7 @@
         @include('default.servicos.servicos-cards')
         @include('default.eventos.eventos-cards')
         @include('default.index.index-sobre-mais')
-        @include('default.index.index-sobre-mais')
+        @include('default.index.operations')
 
 
         @include('default.index.index-linha-produtos')
