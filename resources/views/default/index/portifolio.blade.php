@@ -75,12 +75,12 @@
       @endforeach
     </div>
 
-    {{-- CTA --}}
-   <div class="row-ctas text-center mt-4 links">
-                <a href="{{ $portifolioUrl }}" class="btn btn-outline-primary btn-lg" aria-label="Conheça todos os serviços">
-                    <span>Conheça todos os serviços</span>
-                </a>
-            </div>
+   
+   <div class="row-ctas text-center mt-5 links">
+        <a href="{{ $portifolioUrl }}" class="btn btn-outline-primary btn-lg" aria-label="Acessar portfólio">
+            <span>Acessar portfólio</span>
+        </a>
+    </div>
 
   </div>
 </section>
