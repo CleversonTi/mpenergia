@@ -31,6 +31,7 @@ class SiteController extends BaseSiteController
     public const PAGE_SOBRE = 463;
     public const PAGE_SERVICOS = 532;
     public const PAGE_EVENTOS = 534;
+    public const PAGE_PORTIFOLIO = 550;
 
     public const PAGE_PRODUTOS = 413;
     public const PAGE_PRODUTOS_CATEGORIAS = 474;
@@ -387,5 +388,8 @@ class SiteController extends BaseSiteController
             $idiomaRow = App_idiomas::where('id', $id)->get()->first();
             return $idiomaRow;
         }
+    }
+    function isMobile() {
+        return preg_match('/(android|iphone|ipad|ipod|blackberry|windows phone|opera mini|mobile)/i', $_SERVER['HTTP_USER_AGENT']);
     }
 }

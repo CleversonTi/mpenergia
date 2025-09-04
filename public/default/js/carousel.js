@@ -20,6 +20,18 @@ $(document).ready(function() {
         nav: true
     });
 
+    
+    $(".featured-portifolio .carousel-gallery").owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 0,
+        dots: true,
+        autoplay: false,
+        nav: false,
+        autoplayTimeout: 8000,
+    });
+    
+
     $('.owl-galeria-sobre').owlCarousel({
         mouseDrag: true,
         autoHeight: true,
@@ -123,29 +135,7 @@ $(document).ready(function() {
         $('.owl-carousel').trigger('refresh.owl.carousel')
     });
 
-    // $('.owl-galeria').owlCarousel({
-    //     mouseDrag: true,
-    //     autoHeight: true,
-    //     autoplay: true,
-    //     autoplayTimeout: 8000,
-    //     autoplayHoverPause: false,
-    //     navText: navText,
-    //     loop: true,
-    //     responsive: {
-    //         0: {
-    //             nav: false,
-    //             dots: true,
-    //             margin: 0,
-    //             items: 1
-    //         },
-    //         992: {
-    //             dots: true,
-    //             nav: true,
-    //             margin: 20,
-    //             items: 4
-    //         }
-    //     }
-    // });
+   
     //
     // $('.owl-danilo').owlCarousel({
     //     mouseDrag: true,

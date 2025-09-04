@@ -33,18 +33,18 @@ class IndexController extends SiteController
 
 
         //Eventos //
-        
         $plugin->setId(SiteController::PAGE_EVENTOS);
-
-        $eventosHome = $plugin->obterCampos();
-        
-        
+        $eventosHome = $plugin->obterCampos();        
         // gera a URL da página de energia
-        $eventosUrl = PluginController::obterUrl(SiteController::PAGE_EVENTOS);
-       
+        $eventosUrl = PluginController::obterUrl(SiteController::PAGE_EVENTOS);   
         $eventosInterna = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
        
-       
+       // Portifolios //
+        $plugin->setId(SiteController::PAGE_PORTIFOLIO);
+        $portifolioHome = $plugin->obterCampos();        
+        // gera a URL da página de energia
+        $portifolioUrl = PluginController::obterUrl(SiteController::PAGE_PORTIFOLIO);   
+        $portifolioInterna = $plugin->obterInternas(['destaque' => true], true, $this->isMobile() ? 1 : 2);
 
         // Produtos
         $plugin->setId(SiteController::PAGE_PRODUTOS);
@@ -111,6 +111,9 @@ class IndexController extends SiteController
             'urlEventos'=>$eventosUrl,
             'eventosInterna' =>  $eventosInterna,
             'eventosHome' =>  $eventosHome,
+            'portifolioUrl'=> $portifolioUrl,
+            'portifolioInterna' =>$portifolioInterna,  
+            'portifolioHome'=> $portifolioHome,
             'produtos_destaques' => $produtos_destaques,
             'fornecedores' => $fornecedores,
             'blog' => $blog,
