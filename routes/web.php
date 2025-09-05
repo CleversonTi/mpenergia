@@ -29,7 +29,7 @@ use App\Http\Controllers\Site\SobreController;
 use App\Http\Controllers\Site\EventosController;
 use App\Http\Controllers\Site\PortifolioController;
 use App\Http\Controllers\Site\ServicosController;
-
+use App\Http\Controllers\Site\ClientesController;
 /*  Index   */
 
 Route::namespace('Site')->group(function () {
@@ -47,7 +47,8 @@ Route::namespace('Site')->group(function () {
     Route::get(PluginController::obterUrl(SiteController::PAGE_EVENTOS), [EventosController::class, 'index'])->name('sobre');
     /*Portifolio  */
     Route::get(PluginController::obterUrl(SiteController::PAGE_PORTIFOLIO), [PortifolioController::class, 'index'])->name('sobre');
-
+     #Orcamento
+    Route::get(PluginController::obterUrl(SiteController::CLIENTES), [ClientesController::class, 'index'])->name('clientes');
 
 
 

@@ -32,6 +32,8 @@ class SiteController extends BaseSiteController
     public const PAGE_SERVICOS = 532;
     public const PAGE_EVENTOS = 534;
     public const PAGE_PORTIFOLIO = 550;
+     public const CLIENTES =                   557;
+     public const BENEFICIOS =         558;
 
     public const PAGE_PRODUTOS = 413;
     public const PAGE_PRODUTOS_CATEGORIAS = 474;

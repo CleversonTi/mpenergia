@@ -6,8 +6,7 @@
 @import "index/index-operacoes";
 @import "index/index-portifolio";
 @import "index/index-contatos";
-
-
+@import "includes/avaliacoes";
 
 @import "index/index-linha-produtos";
 @import "index/index-destaque-produtos";
@@ -21,10 +20,8 @@
 @import "index/index-blog";
 
 section.index-bg-middle-site {
-  background-image: url("../image/bg-middle-site.png");
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: 800px;
+    background-image: url("../image/bg-middle-site.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 800px;
 }
-
-

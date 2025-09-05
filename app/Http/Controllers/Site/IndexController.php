@@ -46,6 +46,14 @@ class IndexController extends SiteController
         $portifolioUrl = PluginController::obterUrl(SiteController::PAGE_PORTIFOLIO);   
         $portifolioInterna = $plugin->obterInternas(['destaque' => true], true, $this->isMobile() ? 1 : 2);
 
+        // Avaliações //
+        $plugin->setId(SiteController:: CLIENTES);
+        $clientesHome = $plugin->obterCampos();  
+        
+        // gera a URL da página de energia
+        $clientesUrl = PluginController::obterUrl(SiteController::CLIENTES);   
+        $clientesInterna = $plugin->obterInternas(['destaque'=>true, 'ativo'=>true], true, $this->isMobile() ? 1 : 3);
+   
         // Produtos
         $plugin->setId(SiteController::PAGE_PRODUTOS);
         $destaques = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
@@ -114,6 +122,10 @@ class IndexController extends SiteController
             'portifolioUrl'=> $portifolioUrl,
             'portifolioInterna' =>$portifolioInterna,  
             'portifolioHome'=> $portifolioHome,
+
+            'clientesUrl'=> $clientesUrl,
+            'clientesInterna' =>$clientesInterna,  
+            'clientesHome'=> $clientesHome,
             'produtos_destaques' => $produtos_destaques,
             'fornecedores' => $fornecedores,
             'blog' => $blog,
