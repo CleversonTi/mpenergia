@@ -1,0 +1,201 @@
+.index-contato{
+  position: relative;
+  padding: 56px 0;
+  background: #0e1a19;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+  /* background image via inline CSS var (opcional) */
+
+    &.homenoBanner{
+        background-image: url("../image/bg_contatos_home.jpg");
+
+    }
+
+    .section-title {
+      color: $primary-color;
+      text-align: left;
+      strong{
+        color: $text-white;
+
+      }
+    }
+    .card-text{
+      color: $text-white;
+
+      color: #FFF;
+      font-family:$font-primary;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .footer-descricao{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .card-text{
+        color: $primary-color;;
+        font-family: "DM Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+      }
+  }
+    @supports(background: paint(dummy)){
+      /* nada */
+    }
+    &::before{
+      /* fallback sem CSS var */
+      content: "";
+    }
+    &[style*="--bg"]{
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+
+  .container.big{ position: relative; z-index: 2; }
+
+    &__mask{
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 1;
+    }
+    .form{
+      &.col-lg-4{
+        &.offset-lg-1{
+          margin-left: 0 !important;
+          margin-right: 8.333333% !important; /* 1 coluna (1/12) */
+        }
+      }
+      
+    }
+
+    /* LEFT */
+    &__left{
+      color: #fff;
+      max-width: 502px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  &__brand{
+    margin-bottom: 18px;
+    img{ max-height: 34px; width: auto; }
+  }
+  &__title{
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    color: #fff;
+    .hl{
+      color: #ffcd3c; /* amarelo do layout */
+    }
+  }
+  &__subtitle{
+    opacity: .9;
+    margin-bottom: 18px;
+  }
+  &__zap{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #1fae5b;
+    color: #0c2a1b;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, filter .15s ease;
+    i{ font-size: 18px; }
+    &:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+  }
+
+  /* RIGHT – CARD DO FORM */
+  &__form-card{
+   
+    padding: 60px 50px 30px 40px;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    max-width: 460px;
+
+    border-radius: 16px;
+
+    background: rgb(217, 217, 217, 0.2);
+  }
+  &__form-head{
+    margin-bottom: 10px;
+    h3{ margin: 0 0 2px; font-weight: 700; }
+    p{ margin: 0; opacity: .85; }
+  }
+
+  /* inputs */
+  .label{
+    display:block;
+    margin-bottom: 6px;
+    color: #FFF;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .input{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,.25);
+   
+    color: #fff;
+    padding: 7px 12px;
+    outline: none;
+
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.10);
+
+
+
+
+    transition: border-color .15s ease, background .15s ease;
+    &::placeholder{ color: rgba(255,255,255,.65); }
+    &:focus{
+      border-color: #ffcd3c;
+      background: rgba(0,0,0,.35);
+    }
+  }
+  .textarea{ resize: vertical; }
+
+  .main-cta{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #F6911D 0%, #EBB632 100%);
+    transition: transform .15s ease, filter .15s ease;
+
+    color: #02335D;
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    span{
+      position: relative;
+      @include efects-underline(#02335D); 
+    }
+    &:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+  }
+
+  /* responsivo */
+  @media (max-width: 991.98px){
+    padding: 40px 0;
+    &__left{ margin-bottom: 22px; }
+  }
+}

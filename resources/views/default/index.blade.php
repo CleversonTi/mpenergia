@@ -12,6 +12,7 @@
         @include('default.index.index-sobre-mais')
         @include('default.index.operations')
         @include('default.index.portifolio')
+        @include('default.index.index-contato')
 
 
         @include('default.index.index-linha-produtos')
