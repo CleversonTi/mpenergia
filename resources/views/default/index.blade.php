@@ -13,6 +13,7 @@
     @include('default.index.portifolio')
     @include('default.index.index-contato')
     @include('default.index.index-avaliacoes')
+    @include('default.includes.redes')
 
 
 

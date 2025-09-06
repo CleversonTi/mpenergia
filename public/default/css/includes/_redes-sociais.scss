@@ -1,0 +1,183 @@
+#sec-redes {
+    background: #f2f2f2;
+    padding: 56px 0 0;
+    position: relative;
+    .container {
+        position: unset;
+    }
+    .redes-wrap {
+        position: relative;
+        position: unset;
+    } // ancora a faixa
+
+    /* ------------ Título e descrição ------------ */
+
+    .section-title {
+        p {
+            color: $secundary-color;
+            font-family: $font-primary;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-align: left;
+            strong {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    .redes-title {
+        width: 26.5rem; // ~425px
+        margin: 0 0 0.75rem 0;
+        font-family: "DM Sans", sans-serif;
+        font-size: 35px;
+        line-height: normal;
+        font-weight: 300;
+        color: #023766;
+
+        .laranja {
+            color: #f6911d;
+            font-weight: 800;
+        }
+    }
+
+    .redes-underline {
+        width: 10rem; // ~160px
+        height: 6px;
+        border-radius: 6px;
+        background: #f6911d;
+        margin: 0.5rem 0 1.25rem;
+    }
+
+    .redes-desc {
+        width: 22.9rem; // ~367px
+        color: #323232;
+        font-family: "DM Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 0 1.25rem 0;
+    }
+
+    /* ------------ Painel azul (galeria) ------------ */
+    .redes-panel {
+        position: relative;
+        z-index: 2; // abaixo da faixa
+        background: #023766;
+        border-radius: 22px;
+        padding: 1rem;
+        box-shadow: 0 18px 56px rgba(2, 55, 102, 0.2);
+    }
+
+    .redes-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem; // 16px
+    }
+
+    .tile {
+        border-radius: 16px;
+        overflow: hidden;
+        aspect-ratio: 4 / 5; // ~316x396
+        background: radial-gradient(
+            110% 110% at 10% 0%,
+            #0f3a67 0%,
+            #082c4f 100%
+        );
+        box-shadow: inset 0 6px 22px rgba(0, 0, 0, 0.25);
+        display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        &.is-ph {
+            background: linear-gradient(135deg, #0f3a67, #0a2748);
+        }
+    }
+
+    /* ------------ Faixa amarela sobreposta ------------ */
+    .redes-ribbon {
+        // medidas do layout
+        --w: 46.4rem; // 807px
+        --h: 5rem; // 127px
+
+        position: absolute;
+        left: 0;
+        bottom: 0; // invade um pouco o painel
+        width: var(--w);
+        height: var(--h);
+        background: #f6911d;
+        border-radius: 0 44px 0 0; // canto superior direito grande
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 2.4rem; // ~25 no layout
+        padding: 0 2rem;
+        z-index: 3; // acima do painel
+
+        .icons {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 2.4rem;
+            justify-content: center;
+
+            a {
+                width: 30px;
+                height: 30px;
+                display: grid;
+                place-items: center;
+                transition: transform 0.15s ease;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+
+        .badge-count {
+            margin-left: auto;
+            background: #d33c2e;
+            color: #fff;
+            font: 700 16px "DM Sans", sans-serif;
+            padding: 0.3rem 0.65rem;
+            border-radius: 8px;
+            line-height: 1;
+        }
+    }
+
+    /* ------------ Responsivo ------------ */
+    @media (max-width: 1200px) {
+        .redes-ribbon {
+            width: min(44rem, calc(100% - 2rem));
+            bottom: -1.2rem;
+        }
+    }
+    @media (max-width: 991px) {
+        .redes-gallery {
+            gap: 0.75rem;
+        }
+        .redes-ribbon {
+            position: static; // passa para baixo em telas menores
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            padding: 12px 16px;
+            gap: 1rem;
+        }
+    }
+    @media (max-width: 575px) {
+        .redes-gallery {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

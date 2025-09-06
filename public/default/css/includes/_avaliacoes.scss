@@ -10,28 +10,30 @@
     .section-titleavaliacoes p {
         margin: 0 0 32px 0;
         text-align: center;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font-primary;
         font-size: 35px;
         font-style: normal;
         font-weight: 300; /* parte azul */
         line-height: normal;
-        color: #023766;
+        color: $secundary-color;
     }
     .section-titleavaliacoes strong {
-        color: #f6911d; /* parte laranja */
+        color: $primary-color; /* parte laranja */
         font-weight: 800;
     }
 
     /* Grid dos cards */
-    .row {
-        justify-content: space-between;
+    .card-itens {
+        display: flex;
         align-items: center;
-        margin: 0;
+        justify-content: center;
+        gap: 1.5625rem;
     }
 
     /* Card */
     .avaliacao-card.card {
-        width: 417px;
+        max-width: 417px;
+        width: 100%;
         min-height: 334px;
         border-radius: 20px;
         background: #fff;
@@ -58,7 +60,7 @@
     /* Tipografia */
     .card-text {
         color: #323232;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font-primary;
         font-size: 16px;
         font-weight: 400;
         line-height: normal;
@@ -66,23 +68,21 @@
     }
     .card-title {
         color: #023766;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font-primary;
         font-size: 16px;
         font-weight: 700; /* nomes */
         line-height: normal;
         margin: 0;
     }
 
-    /* CTA */
-    .links .btn.btn-outline-primary {
-        border-radius: 8px;
-        padding: 10px 20px;
-        border-color: #023766;
-        color: #023766;
-    }
-    .links .btn.btn-outline-primary:hover {
-        background: #023766;
-        color: #fff;
+    .row-ctas {
+        &.links {
+            .btn {
+                &.btn-outline-primary {
+                    padding: 1rem 4rem;
+                }
+            }
+        }
     }
 
     /* Responsivo */
