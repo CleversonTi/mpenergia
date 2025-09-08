@@ -61,6 +61,15 @@ class IndexController extends SiteController
         $blogHome = $plugin->obterCampos(); 
         $blog = $plugin->obterInternas([], true, 0, false, 3, 0, ['id', 'DESC']);
 
+
+        // Dúvidas
+        $plugin->setId(SiteController::PAGE_DUVIDAS);
+        $duvidasUrl = PluginController::obterUrl(SiteController::PAGE_DUVIDAS);   
+        $duvidasHome = $plugin->obterCampos(); 
+        
+       $duvidasItens = $plugin->obterInternas(['destaques'=>true], true, $this->isMobile() ? 1 : 3);
+        
+
         // Produtos
         $plugin->setId(SiteController::PAGE_PRODUTOS);
         $destaques = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
@@ -136,6 +145,9 @@ class IndexController extends SiteController
             'blog' => $blog,
             'blogUrl' => $blogUrl,
             'blogHome' => $blogHome,
+            'duvidasItens' => $duvidasItens,
+            'duvidasUrl' => $duvidasUrl,
+            'duvidasHome' => $duvidasHome,
             'depoimentos' => $depoimentos,
         ]);
     }
