@@ -1,0 +1,126 @@
+/* ===== Perguntas Frequentes (component) ===== */
+.faq {
+    // espaçamentos do bloco (ajuste conforme o grid do projeto)
+    margin-top: 24px;
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 635px; // igual ao layout
+    width: 100%;
+}
+
+.faq-item {
+    margin-bottom: 14px;
+
+    &__title {
+        margin: 0 0 8px 0;
+    }
+}
+
+/* Botão da pergunta */
+.faq-q {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    width: 100%;
+    min-height: 50px; // 50px como no layout
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #023766; // azul do layout
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: #0a4993;
+    } // leve realce
+    &:focus-visible {
+        outline: 2px solid #ffb703; // foco acessível
+        outline-offset: 2px;
+    }
+
+    // caret
+    &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(45deg);
+        margin-left: auto;
+        transition: transform 0.2s ease;
+    }
+
+    &[aria-expanded="true"]::after {
+        transform: rotate(-135deg);
+    }
+
+    // caso a pergunta já venha como <p>/<h*> dentro:
+    .faq-q__text {
+        display: inline-block;
+    }
+}
+
+/* Resposta */
+.faq-a {
+    // escondida por JS via atributo [hidden]
+    margin-top: 10px;
+
+    &__box {
+        background: #ffffff;
+        border: 1px solid #e6ecf3; // borda clara como no print
+        border-radius: 8px;
+        padding: 16px 18px;
+        color: #1d2b39;
+        font-size: 14px;
+        line-height: 1.5;
+
+        p {
+            margin: 0 0 10px 0;
+        }
+        ul,
+        ol {
+            margin: 8px 0 8px 18px;
+        }
+        a {
+            color: #0a4993;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* CTA “Acesse todas as dúvidas” que fica embaixo */
+.faq-all {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #023766;
+    color: #023766;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 8px;
+
+    &:hover {
+        background: #023766;
+        color: #fff;
+    }
+}
+
+/* Responsivo básico */
+@media (max-width: 991px) {
+    .faq-list {
+        max-width: 100%;
+    }
+}
