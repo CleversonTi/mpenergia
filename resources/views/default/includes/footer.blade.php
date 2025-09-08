@@ -132,10 +132,11 @@
                         ng-submit="submitForm($event,'newsletter',newsletter_footer.$error)">
                         <label for="news_email" class="label">E-mail</label>
                         <div class="news-input">
-                            <input id="news_email" type="email" ng-model="form.email" required>
-                            <button type="submit" aria-label="Enviar">
+                            <input id="news_email" type="email" ng-model="form.email" required autocomplete="email"
+                                inputmode="email" />
+                            <button type="submit" aria-label="Enviar" class="send-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none">
+                                    viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M17.991 6.0096L5.39901 10.5626L9.59401 12.9906L13.293 9.2906C13.4806 9.10309 13.7351 8.99781 14.0004 8.9979C14.2656 8.99799 14.52 9.10346 14.7075 9.2911C14.895 9.47874 15.0003 9.73319 15.0002 9.99846C15.0001 10.2637 14.8946 10.5181 14.707 10.7056L11.007 14.4056L13.437 18.5996L17.991 6.0096ZM18.314 3.7656C19.509 3.3326 20.667 4.4906 20.234 5.6856L14.952 20.2906C14.518 21.4886 12.882 21.6346 12.243 20.5316L9.02601 14.9736L3.46801 11.7566C2.36501 11.1176 2.51101 9.4816 3.70901 9.0476L18.314 3.7656Z"
                                         fill="#EBB632" />
@@ -143,17 +144,13 @@
                             </button>
                         </div>
                     </form>
+
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div class="line-separator"></div>
-                </div>
-            </div>
+
         </div>
 
-        {{-- barra inferior de créditos / direitos --}}
-        @include('default.includes.copy')
+
     </div>
 </section>

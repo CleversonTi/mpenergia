@@ -2,7 +2,7 @@
     if ($_SERVER['HTTP_HOST'] == 'localhost') {
         $version = '?raddarAtt=' . md5(rand(1, 999999999));
     } else {
-        $version = '?raddarAtt=' . md5('08/01/25 21:57');
+        $version = '?raddarAtt=' . md5('08/09/25 13:31');
     }
 @endphp
 <!doctype html>
@@ -100,7 +100,7 @@
 
     <footer>
         @include('default.includes.footer')
-        @include('default.includes.barra-fixa')
+
         @include('default.includes.botao-whatsapp')
         @include('default.includes.modal-whatsapp')
         @include('default.includes.barra-fixa-mobile')

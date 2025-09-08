@@ -1,9 +1,9 @@
 section.footer {
     .maps {
-        height: 220px;
+        height: 302px;
         iframe {
             width: 100%;
-            height: 220px;
+            height: 302px;
         }
     }
 
@@ -12,9 +12,9 @@ section.footer {
         background-image: url("../image/bg-footer.png");
         background-size: cover;
         background-repeat: no-repeat;
-        height: 415px;
+
         color: #fff;
-        padding: 48px 0 70px;
+        padding: 48px 0 10px;
 
         .footer-grid {
             align-items: flex-start;
@@ -182,6 +182,23 @@ section.footer {
         }
 
         .footer-news {
+            // tokens
+            --acc: #ebb632; // cor de destaque (seta/realce)
+            --bgA: rgba(255, 255, 255, 0.1); // fundo base do input
+            --bgB: rgba(255, 255, 255, 0.14); // fundo ao focar
+            --bdA: rgba(255, 255, 255, 0.15); // borda base
+            --bdB: rgba(255, 255, 255, 0.35); // borda hover
+            --dur: 0.28s; // duração de transições
+            --eas: cubic-bezier(0.4, 0, 0.2, 1);
+
+            .label {
+                color: #fff;
+                font-family: $font-primary;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 190%;
+            }
+
             .news-input {
                 position: relative;
                 display: flex;
@@ -189,48 +206,105 @@ section.footer {
                 overflow: hidden;
 
                 border-radius: 6px;
-                border: 1px solid rgba(255, 255, 255, 0.15);
-                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid var(--bdA);
+                background: var(--bgA);
+                transition: border-color var(--dur) var(--eas),
+                    background-color var(--dur) var(--eas),
+                    box-shadow var(--dur) var(--eas);
 
-                &:active {
-                    border: 1px solid rgba(255, 255, 255, 1);
+                // underline animado (cresce da esquerda p/ direita)
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 2px;
+                    width: 0%;
+                    margin: 0 auto 0 0; // cresce da esquerda
+                    background: var(--acc);
+                    transition: width var(--dur) var(--eas);
+                }
+
+                &:hover {
+                    border-color: var(--bdB);
+                    background: rgba(255, 255, 255, 0.12);
+                }
+
+                &:focus-within {
+                    border-color: var(--acc);
+                    background: var(--bgB);
+                    box-shadow: 0 0 0 3px rgba(235, 182, 50, 0.22);
+                    &::after {
+                        width: 100%;
+                    }
                 }
             }
+
             input {
                 flex: 1;
                 height: 40px;
-                padding: 0 12px;
+                padding: 0 48px 0 12px; // espaço pro botão
                 background: transparent;
                 border: 0;
                 color: $primary-color;
                 font-size: 14px;
+                outline: none;
+
+                &::placeholder {
+                    color: #cfe0ee;
+                    opacity: 0.85;
+                    transition: opacity var(--dur) ease,
+                        transform var(--dur) var(--eas);
+                }
+                &:focus::placeholder {
+                    opacity: 0.45;
+                    transform: translateX(2px);
+                }
             }
-            input::placeholder {
-                color: #cfe0ee;
-            }
-            label {
-                color: #fff;
-                font-family: $font-primary;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 190%; /* 30.4px */
-            }
-            button {
-                height: 40px;
-                width: 44px;
-                border: 0;
-                background: transparent;
-                color: #0b3559;
-                display: grid;
-                place-items: center;
-                cursor: pointer;
-                transition: filter 0.2s ease;
+
+            .send-btn {
                 position: absolute;
                 right: 0;
+                width: 44px;
+                height: 40px;
+                display: grid;
+                place-items: center;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                color: #0b3559;
+                transition: transform var(--dur) var(--eas),
+                    filter var(--dur) ease;
+
+                // micro-interação: desliza um pouco
+                .news-input:hover &,
+                .news-input:focus-within & {
+                    transform: translateX(2px) scale(1.03);
+                }
+
+                &:hover {
+                    filter: brightness(0.95);
+                }
+                &:focus-visible {
+                    outline: 2px solid var(--acc);
+                    outline-offset: 2px;
+                }
             }
-            button:hover {
-                filter: brightness(0.95);
+
+            // estados extras (opcional)
+            // input inválido ao sair do foco
+            .news-input input:invalid:not(:placeholder-shown) {
+                /* realce mínimo — evite poluição visual enquanto digita */
+                box-shadow: none;
+            }
+        }
+
+        /* Respeita usuários que preferem menos movimento */
+        @media (prefers-reduced-motion: reduce) {
+            .footer-news * {
+                transition: none !important;
+                animation: none !important;
             }
         }
 
