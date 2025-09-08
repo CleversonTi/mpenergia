@@ -2,6 +2,7 @@
     background: #f2f2f2;
     padding: 56px 0 0;
     position: relative;
+
     .container {
         position: unset;
     }
@@ -110,7 +111,7 @@
         bottom: 0; // invade um pouco o painel
         width: var(--w);
         height: var(--h);
-        background: #f6911d;
+        background: #ebb632;
         border-radius: 0 44px 0 0; // canto superior direito grande
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
         display: flex;

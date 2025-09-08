@@ -53,7 +53,14 @@ class IndexController extends SiteController
         // gera a URL da página de energia
         $clientesUrl = PluginController::obterUrl(SiteController::CLIENTES);   
         $clientesInterna = $plugin->obterInternas(['destaque'=>true, 'ativo'=>true], true, $this->isMobile() ? 1 : 3);
-   
+        
+
+        // Blog
+        $plugin->setId(SiteController::PAGE_BLOG);
+        $blogUrl = PluginController::obterUrl(SiteController::PAGE_BLOG);   
+        $blogHome = $plugin->obterCampos(); 
+        $blog = $plugin->obterInternas([], true, 0, false, 3, 0, ['id', 'DESC']);
+
         // Produtos
         $plugin->setId(SiteController::PAGE_PRODUTOS);
         $destaques = $plugin->obterInternas(['destaque'=>true], true, 0, false, 10, 0, ['ordem', 'ASC']);
@@ -107,9 +114,7 @@ class IndexController extends SiteController
         $plugin->setId(SiteController::DEPOIMENTOS);
         $depoimentos = $plugin->obterInternas([], true, 0, false, 3, 0, ['ordem', 'ASC']);
 
-        // Blog
-        $plugin->setId(SiteController::PAGE_BLOG);
-        $blog = $plugin->obterInternas([], true, 0, false, 3, 0, ['id', 'DESC']);
+        
 
         return view('default.index', [
             'home' => $home,
@@ -129,6 +134,8 @@ class IndexController extends SiteController
             'produtos_destaques' => $produtos_destaques,
             'fornecedores' => $fornecedores,
             'blog' => $blog,
+            'blogUrl' => $blogUrl,
+            'blogHome' => $blogHome,
             'depoimentos' => $depoimentos,
         ]);
     }
